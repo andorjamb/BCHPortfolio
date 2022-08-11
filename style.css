@@ -4,21 +4,27 @@ body {
 }
 
 .title { 
-    font-family:'optima', sans-serif;
-text-align: center;}
+font-family:'optima', sans-serif;
+text-align: center;
+color: black;
+font-size: 42px;
+
+}
 
 .menu {
+  
     background-color: rgba(255, 255, 204,0.7) ;
     padding: 20px;
-    margin: 20px;
+    margin: 20px 100px;
     border: 3px solid rgba(0,255, 204, 0.5);
     border-radius: 20px;
     color: #009999;
 }
 .main { 
+   padding: 20px 100px;
     font-family: 'Courier New', Courier, monospace;
     margin: 20px;
-    padding: 20px;
+    
     
 }
 
@@ -27,6 +33,8 @@ img {
     width: 180px;
     height: 180px;
     border-radius: 80%;
+    display: inline-block;
+    padding: 10px 0px;
 }
 
 .navbar {
@@ -51,4 +59,11 @@ img {
     list-style: none;
     text-decoration: none;
     font-size: 22px;
+
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgba(102, 153, 153, 0.8);
+
 }
