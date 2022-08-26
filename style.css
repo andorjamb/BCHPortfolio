@@ -1,60 +1,77 @@
-
-/*colour tools
-
-adobe color color wheel
-coolers - create a palette
-color-hex.com
-canva colors - color palette generator
-colorsupplyyy.com
-*/
-
-/*#BD00FF   ?4F7DC7
-6B20DF*/
+ /* border-box */
 
 *{
     border: 0px;
     padding: 0px;
-    /* border-box */
+   
 }
+
 body {
-    background-color: rgba(102, 153, 153, 0.5);
+    background-color: #482c30;
+    color:#EEEDE7;
+    font-family:'Palanquin';
 }
 /* header */
 header {
-    background-image: url("") no-repeat;
+   
 }
 
+.title {
+    display: inline;
+    color: #EEEDE7;
+    font-family: monospace;
+}
+
+h1 {
+    color: #72162D;
+    font-size: 32px;
+}
+
+h2 {
+    color: #B95C50;
+    font-size: 22px;
+    font-family: 'Yeseva One', serif; 
+}
 nav {
    
     padding: none;
-    font-family:'optima', sans-serif;
-    
+    display: inline; 
+  
     
 }
 
-nav ul{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: space-between;
+nav ul li {
     padding: none;
+    list-style: none;
 
 }
 
-nav li a {
-    list-style: none;
+nav a {
     text-decoration: none;
-    font-size: 22px;
+    font-size: 18px;
+    color: #1cd494;
 
 }
 
 .menu {
   
-    background-color: rgba(255, 255, 204,0.7) ;
+    background-color: #B97D60;
+    background-image: url("/assets/images/isuru-ranasinha-6NAfu6IknAA-unsplash.jpg");
+    height: 200px;
     padding: 20px;
-    margin: 20px 100px;
-    border: 3px solid rgba(0,255, 204, 0.5);
-    border-radius: 20px;
-    color: #009999;
+    margin: 20px 20px;
+    border: 3px solid #B95C50;
+    border-radius: 5px;
+    color: #4CB3A5;
+    box-shadow: 5px 5px 5px #B95C50;
+    box-shadow: 7px 7px 10px #EEEDE7;
+    
+}
+
+
+.menu img {   
+    opacity: 0.5;
+    filter: hue-rotate(180deg);
 }
 
 
@@ -62,27 +79,33 @@ nav li a {
 
 .main { 
    padding: 20px 100px;
-    font-family: 'Courier New', Courier, monospace;
     margin: 20px;
     
     
 }
-.title { 
-font-family:'optima', sans-serif;
-text-align: center;
-color: black;
-font-size: 42px;
 
+.info {
+    border-left: 3px solid #E9BBDC;
+    padding-left: 30px;
 }
 
-
-
-img {
+.info img
+{
+    float:right;
+    border-left: 3px solid #E9BBDC;
+    padding-left: 30px;
     width: 180px;
     height: 180px;
     border-radius: 80%;
-    display: inline-block;
-    padding: 10px 0px;
+    box-shadow: 5px  5px #B97D60 ;
+}
+
+.logo img {
+    border-radius: 80%;
+    display: inline;
+    height: 100px;
+    width: 100px;
+    
 }
 
 
@@ -90,4 +113,17 @@ img {
     text-decoration: none;
     color: rgba(102, 153, 153, 0.8);
 
+}
+
+button {
+    border-radius: 10px;
+    font-family: monospace;
+    padding: 5px 10px;
+}
+
+/* footer */
+
+footer {
+
+    background-color: #EEEDE7;
 }
