@@ -2,23 +2,23 @@
 @import url("https://fonts.googleapis.com/css?family=Water+Brush");
 @import url("https://fonts.googleapis.com/css?family=Walter+Turncoat");
 
+:root {
+    --oak-brown: #A88058;
+    --apple-green: #EAE8B2;
+    --jade-blue: #8EB3CF;
+    --jade-green: #8EB3CF;
+    --marble-blue: #C4CBDD;
+    --shadow-blue: #061647;
+    --apple-red: #521D18;
+    --apple-blush: #79413C;
+
+}
+
 * {
     border: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
-/*
-COLORS:
-
-#A88058 oak brown
-#EAE8B2  apple green
-#8EB3CF  jade blue
-#82ABB4   jade green
-#C4CBDD   marble blue
-#061647   shadow blue
-#79413C    apple blush
-#521D18   apple red
-*/
 
 
 body {
@@ -28,6 +28,7 @@ body {
 h1 {
     font-family: "Water Brush";
     font-size: 50px;
+    text-align: center;
 
 }
 
@@ -38,45 +39,62 @@ h2 {
 
 
 header {
+
     border: 4px solid black;
 }
 
+.banner {
+    display: flex;
+}
+
+.logo {
+    background-color: #061647;
+    flex: 20%;
+    height: 150px;
+    color: white;
+}
+
+/* 
+.logo img {
+    height: 120px;
+    width: auto;
+} */
+
 .title {
-    padding: 0px 20px;
-    background-color: #C4CBDD;
+    padding: 0px 0px;
+    flex: 80%;
+    background-color: var(--apple-blush);
+    height: 150px;
+    color: var(--marble-blue);
+
 }
 
 nav {
-    background-color: #521D18;
-
-
+    background-color: var(--apple-green);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 nav li {
     list-style-type: none;
+    flex: 1;
 
 }
 
 nav a {
     text-decoration: none;
     color: white;
-}
-
-.logo {
-    background-color: #061647  ;
-    float: left;
-    display: inline;
-    height: 120px;
-    padding: 10px 10px;
-}
-
-.logo img {
-    height: 120px;
-    width: auto;
+    flex: 1;
+    align-items: space-between;
+    justify-content: center;
+    ;
 }
 
 
-main {
+
+
+.main-flex-container {
     display: flex;
 }
 
@@ -110,6 +128,8 @@ main {
 }
 
 footer {
-
-    background-color: #82ABB4 ;
+    background-image: linear-gradient(var(--jade-blue), var(--apple-green));
+    height: 150px;
 }
+
+.contact-form {}
