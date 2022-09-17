@@ -1,155 +1,141 @@
 @import url("https://fonts.googleapis.com/css?family=Inria+Sans");
-@import url("https://fonts.googleapis.com/css?family=Water+Brush");
+@import url("https://fonts.googleapis.com/css?family=Meddon");
 @import url("https://fonts.googleapis.com/css?family=Walter+Turncoat");
 
+/*  GLOBAL STYLES  */
 :root {
-    --oak-brown: #A88058;
-    --apple-green: #EAE8B2;
-    --jade-blue: #8EB3CF;
-    --jade-green: #8EB3CF;
-    --marble-blue: #C4CBDD;
-    --shadow-blue: #061647;
-    --apple-red: #521D18;
-    --apple-blush: #79413C;
-
+  --oak-brown: #a88058;
+  --apple-green: #eae8b2;
+  --jade-blue: #8eb3cf;
+  --jade-green: #8eb3cf;
+  --marble-blue: #c4cbdd;
+  --shadow-blue: #061647;
+  --apple-red: #521d18;
+  --apple-blush: #79413c;
 }
 
 * {
-    border: 0;
-    padding: 0;
-    box-sizing: border-box;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
 body {
-    font-family: "Inria sans";
+  font-family: "Inria sans";
 }
 
 h1 {
-    font-family: "Water Brush";
-    font-size: 50px;
-    text-align: center;
-    text-shadow: 2px 2px var(--apple-red);
-
+  font-family: "Meddon";
+  font-size: 3rem;
+  text-shadow: 1px 1px white;
+  margin: 0 0;
+  color: var(--apple-red);
+  margin: 0 0;
 }
 
 h2 {
-    font-family: "Walter Turncoat";
-    font-size: 24px;
+  font-family: "Walter Turncoat";
+  font-size: 1.5rem;
 }
 
+/*   HEADER   */
 
 header {
-
-    border: 4px solid black;
+  background: transparent;
 }
 
 .title-banner {
-    display: flex;
-    background-color: var(--apple-blush);
-    height: 150px;
-}
+  display: flex;
+  background-color: var(--apple-blush);
 
-.title {
-    padding: 0px 0px;
-    flex: 80%;
-    background-color: var(--apple-blush);
-    color: var(--marble-blue);
+  margin-bottom: 0;
+  border: 2px solid red;
 }
 
 .logo {
-    background-color: #061647;
-    flex: 20%;
-    height: 150px;
-    color: white;
+  background: transparent;
+
+  margin-bottom: 0;
 }
 
-/* 
 .logo img {
-    height: 120px;
-    width: auto;
-} */
+  height: auto;
+  width: auto;
+  margin: 0 0;
+}
 
 nav {
-    /*div for the nav links*/
-    /* border: 3px solid var(--apple-blush); */
-    box-shadow: 3px 3px 5px var(--apple-red);
-    background-color: var(--apple-red);
-    font-size: 1.5em;
-    height: 100px;
-    padding: 0 20px;
-
+  background-color: var(--apple-red);
+  font-size: 1.5em;
+  margin-top: 0;
+  height: 80px;
+  line-height: 80px;
+  padding: 0 40px;
 }
 
 nav ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    list-style-type: none;
-
+  max-height: 80px;
+  margin: 0 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  list-style-type: none;
+  border: solid 4px blue;
 }
 
 nav a {
-    text-decoration: none;
-    color: white;
-    align-items: center;
-    justify-content: space-between;
-    flex: 100%;
-    padding: 30px;
-
+  text-decoration: none;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
 }
 
 nav a :hover {
-    color: var(--jade-green);
-}
-
-
-
-
-.main-flex-container {
-    display: flex;
+  color: var(--oak-brown);
 }
 
 .hero {
-
-    background-color: #A88058;
-
+  background-color: #a88058;
 }
 
-.hero img {
-    width: 100%;
-    height: auto;
+.hero-banner img {
+  width: 100%;
+  height: auto;
 }
 
+/* MAIN CONTENT */
 
-
+.main-flex-container {
+  display: grid;
+}
 .info {
-    padding: 0 20px;
+  padding: 0 20px;
+  margin: 0;
 }
 
 #projects {
-    background-color: #EAE8B2;
+  background-color: #eae8b2;
 }
 
 #aboutMe {
-
-    background-color: #8EB3CF;
+  background-color: #8eb3cf;
 }
 
 #skills {
-    background-color: #82ABB4;
+  background-color: #82abb4;
 }
 
 #bch {
-
-    background-color: var(--oak-brown);
+  background-color: var(--oak-brown);
 }
+
+/* FOOTER  */
 
 footer {
-    background-image: linear-gradient(to right, var(--jade-blue), var(--shadow-blue));
-    height: 150px;
+  background-color: var(--jade-blue);
+  min-height: 200px;
 }
-
-.contact-form {
-    box-shadow: 1px 1px var(--marble-blue)
+.contact-form input {
+  border-radius: 7px;
 }
