@@ -4,7 +4,7 @@
 
 /*  GLOBAL STYLES  */
 :root {
-  --oak-brown: #a88058;
+  --oak-brown: #85583C;
   --apple-green: #eae8b2;
   --jade-blue: #8eb3cf;
   --jade-green: #8eb3cf;
@@ -12,10 +12,12 @@
   --shadow-blue: #061647;
   --apple-red: #521d18;
   --apple-blush: #79413c;
+  --glass-blue: #588AC4;
+  --magenta: #8F4051;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -51,14 +53,11 @@ header {
 .title-banner {
   display: flex;
   background-color: var(--apple-blush);
-
   margin-bottom: 0;
-  border: 2px solid red;
 }
 
 .logo {
   background: transparent;
-
   margin-bottom: 0;
 }
 
@@ -84,7 +83,6 @@ nav ul {
   flex-direction: row;
   flex-wrap: nowrap;
   list-style-type: none;
-  border: solid 4px blue;
 }
 
 nav a {
@@ -112,46 +110,83 @@ nav a :hover {
 
 .main-flex-container {
   display: grid;
+  background: var(--oak-brown);
 }
+
 .info {
   padding: 0 20px;
-  margin: 0;
+  margin: 20px 20px;
+  border-radius: 14px;
+  padding: 1rem;
 }
 
 #projects {
-  background-color: #eae8b2;
+  background-color: var(--magenta);
+  color: white;
 }
 
 #aboutMe {
-  background-color: #8eb3cf;
+  background-color: var(--jade-green);
 }
 
 #skills {
-  background-color: #82abb4;
+  background-color: var(--jade-green);
 }
 
 #bch {
-  background-color: var(--oak-brown);
+  background-color: var(--jade-green);
 }
 
 /* FOOTER  */
 
 footer {
-  background-color: var(--jade-blue);
+  background-color: var(--oak-brown);
   min-height: 200px;
+  padding: 1rem;
 }
+
 .contact-form input {
   border-radius: 7px;
+  padding: 0.5rem 1rem;
+}
+
+#logo4 {
+  height: 75px;
+  width: auto;
+  align-items: right;
+  border-radius: 20px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.rotate {
+  animation: spin 1s 3;
 }
 
 #back-to-top {
-    border-radius: 5px 5px;
-    background-color: var(--jade-green);
-    box-shadow: 1px 2px 2px grey;
-    color: white;
+  border-radius: 5px 5px;
+  background-color: var(--jade-green);
+  box-shadow: 1px 2px 2px grey;
+  color: white;
 
 }
+
+#messageButton {}
 
 .slidingMenu {
-    background-color: var(--apple-green);
+  background-color: var(--apple-green);
 }
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+@media screen and (max-width: 700px) {}

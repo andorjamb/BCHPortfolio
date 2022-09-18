@@ -7,13 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anna's Portfolio</title>
   <link rel="stylesheet" href="/style.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
   <header>
     <div class="title-banner">
       <div class="logo">
-        <img class="logo" src="/assets/images/logo.png" />
+        <img class="logo" src="/assets/images/logo.png" alt="logo" />
       </div>
       <div class="title">
         <h1>Anna Petelin</h1>
@@ -37,63 +41,67 @@
       </ul>
     </nav>
   </header>
-  <<<<<<< Updated upstream <section class="hero">
+  <section class="hero">
     <div class="hero-banner">
-      <img class="hero-banner" src="/assets/images/appleBowl.jpg">
+      <img class="hero-banner" src="/assets/images/appleBowl.jpg" alt="apples-in-bowl">
     </div>
-    </section>
-    <main>
-      <div class="main-flex-container">
-        <section class="info" id="projects">
-          <h2>Projects</h2>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-          deleniti voluptatibus adipisci ullam quos harum doloremque, sequi eius
-          distinctio! Eos recusandae a, possimus quia saepe voluptas voluptate
-          minus debitis qui.
-          <img class="info" class="left-float" src="" /><!-- project image here -->
-        </section>
-        <section class="info" id="aboutMe">
-          <h2>About Me</h2>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
-          provident quae asperiores, inventore sunt quos officiis nobis
-          voluptas, iusto quo porro? Nemo iure maxime fugit ex rerum eum enim
-          distinctio!<img src="" /><!-- project image here -->
-        </section>
-        <section class="info" id="skills">
-          <h2>Skills</h2>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore
-          tempora magnam optio delectus, adipisci, quia, officia dolor nemo sunt
-          magni eveniet dignissimos fugiat asperiores dolorem nesciunt commodi
-          autem consequuntur possimus?
-          <img class="left-float" src="" /><!-- project image here -->
-        </section>
-      </div>
+  </section>
+  <main>
+    <div class="main-flex-container">
+      <section class="info" id="projects">
+        <h2>Projects</h2>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+        deleniti voluptatibus adipisci ullam quos harum doloremque, sequi eius
+        distinctio! Eos recusandae a, possimus quia saepe voluptas voluptate
+        minus debitis qui.
+        <img class="info" class="left-float" src="" /><!-- project image here -->
+      </section>
+      <section class="info" id="aboutMe">
+        <h2>About Me</h2>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
+        provident quae asperiores, inventore sunt quos officiis nobis
+        voluptas, iusto quo porro? Nemo iure maxime fugit ex rerum eum enim
+        distinctio!<img src="" /><!-- project image here -->
+      </section>
+      <section class="info" id="skills">
+        <h2>Skills</h2>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore
+        tempora magnam optio delectus, adipisci, quia, officia dolor nemo sunt
+        magni eveniet dignissimos fugiat asperiores dolorem nesciunt commodi
+        autem consequuntur possimus?
+        <img class="left-float" src="" /><!-- project image here -->
+      </section>
       <section class="info" id="bch">
         <h3>Business College Helsinki</h3>
         I am studying the Fullstack Program at
         <a href="https://en.bc.fi/">Business College Helsinki.</a>
       </section>
-    </main>
 
-    <footer>
+    </div>
+  </main>
 
-      <p id="copyright">Copyright &copy Anna Petelin 2022</p>
-      <h3>Contact me:</h3>
-      <form class="contact-form">
-        <tr>
-          <td>
-            <label for="name"><input type="text" id="name" placeholder="Your name" /></label>
-          </td>
-          <button type="submit"></button>
-        </tr>
-        <tr>
-          <td>
-            <label for=""><input /></label>
-          </td>
-        </tr>
-      </form>
-    </footer>
-    <script src="/main.js"></script>
+
+  <footer>
+
+    <p id="copyright">Copyright &copy Anna Petelin 2022</p>
+    <h3>Contact me:</h3>
+    <form class="contact-form">
+      <tr>
+        <td>
+          <label for="name"><input type="text" id="name" placeholder="Your name" /></label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="message"><input type=text maxlength=100 placeholder="Message" /></label>
+        </td>
+      </tr>
+      <input type="submit" id="messageButton"><button>
+    </form>
+    <div><img id="logo4" src="/assets/images/Untitled.png"></div>
+    <p id="back-to-top">Back to Top</p>
+  </footer>
+  <script src="/main.js"></script>
 </body>
 
 </html>
