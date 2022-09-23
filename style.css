@@ -69,6 +69,12 @@ header {
   margin: 0 0;
 }
 
+.menu-icon {
+  font-family: 'Material Symbols Outlined';
+  display: none;
+}
+
+
 nav {
   background-color: var(--primary-apple-red);
   font-size: 1.5em;
