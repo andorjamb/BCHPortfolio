@@ -17,5 +17,5 @@ const messageButton = document.
 const logo4 = document.getElementById("logo4");
 messageButton.addEventListener("submit", function (event) {
     event.preventDefault();
-    logo4.classList.add("rotate");
+   logo4.classList.add("rotate") ;
 })

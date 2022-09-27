@@ -106,7 +106,7 @@ nav a :hover {
 }
 
 .hero {
-  background-color: #a88058;
+  background-image: linear-gradient(to right, #a88058, #cab6a2);
 }
 
 .hero-banner img {
@@ -118,7 +118,7 @@ nav a :hover {
 
 .main-flex-container {
   display: grid;
-  background: var(--oak-brown);
+  background: var(--primary-apple-red);
 }
 
 .info {
@@ -129,9 +129,23 @@ nav a :hover {
 }
 
 #projects {
-  background-color: var(--secondary-apple-pink);
+  background-color: var(--primary-apple-blush);
   color: white;
+  display: flex;
+  justify-content: space-between;
 }
+
+.card {
+flex-wrap: wrap;
+min-height: 200px;
+min-width: 200px;
+box-shadow: 0 0 5px rgb(73, 70, 70);
+border-radius: 7px;
+background-color: #FFFFFF;
+padding: 2rem;
+margin: 2rem;
+}
+
 
 #aboutMe {
   background-color: var(--jade-green);
@@ -180,7 +194,9 @@ footer {
 
 }
 
-#messageButton {}
+#messageButton {
+  border-radius: 7px;
+}
 
 .slidingMenu {
   background-color: var(--highlight-apple-green);
