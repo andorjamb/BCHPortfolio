@@ -2,6 +2,7 @@
 console.log("testing connection");
 const backToTop = document.getElementById('back-to-top');
 backToTop.addEventListener('click', function () { window.scroll(0, 0) });
+const form = document.querySelector('form');
 
 
 
@@ -12,10 +13,10 @@ function scrollDownEvents() {
     backToTop.style.visibility = visible;
 }
 
-const messageButton = document.
-    getElementById("messageButton");
-const logo4 = document.getElementById("logo4");
-messageButton.addEventListener("submit", function (event) {
+const submitMessage = document.form.
+    querySelector("#submitMessage");
+const logo4 = document.querySelector('#logo4');
+submitMessage.addEventListener("submit", function (event) {
     event.preventDefault();
    logo4.classList.add("rotate") ;
 })

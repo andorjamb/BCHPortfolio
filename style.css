@@ -135,20 +135,34 @@ nav a :hover {
   justify-content: space-between;
 }
 
+
 .card {
 flex-wrap: wrap;
 min-height: 200px;
 min-width: 200px;
+max-height: 300px;
+max-width: 300px;
 box-shadow: 0 0 5px rgb(73, 70, 70);
 border-radius: 7px;
 background-color: #FFFFFF;
 padding: 2rem;
 margin: 2rem;
 }
+.card img, iframe{
+  max-height: 200px;
+}
 
+.info img{
+  max-height: 200px;
+  max-width: auto;
+  margin: 1rem;
+  border-radius:7px;
+  box-shadow: 0 0 5px rgb(73, 70, 70);
+}
 
 #aboutMe {
   background-color: var(--jade-green);
+
 }
 
 #skills {
@@ -171,7 +185,6 @@ footer {
   border-radius: 7px;
   padding: 0.5rem 1rem;
 }
-
 #logo4 {
   height: 75px;
   width: auto;
