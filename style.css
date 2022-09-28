@@ -8,10 +8,11 @@
   --primary-apple-blush: #79413c;
   --secondary-apple-pink: #8F4051;
 
-  --oak-brown: #85583C;
+  --secondary-oak-brown: #85583C;
+
   --highlight-apple-green: #eae8b2;
-  --jade-blue: #8eb3cf;
-  --jade-green: #8eb3cf;
+  --highlight-jade-blue: #8eb3cf;
+  --highlight-jade-green: #8eb3cf;
   --marble-blue: #c4cbdd;
   --shadow-blue: #061647;
   --glass-blue: #588AC4;
@@ -102,7 +103,7 @@ nav a {
 }
 
 nav a :hover {
-  color: var(--oak-brown);
+  color: var(--secondary-oak-brown);
 }
 
 .hero {
@@ -117,56 +118,56 @@ nav a :hover {
 /* MAIN CONTENT */
 
 .main-flex-container {
-  display: grid;
+  display: flex;
+  width: 100%;
   background: var(--primary-apple-red);
+  flex-direction: column;
+  justify-content: center;
 }
 
 .info {
-  padding: 0 20px;
-  margin: 20px 20px;
-  border-radius: 14px;
+  flex: 1;
+  max-width: 1200px;
   padding: 1rem;
+  margin: 1rem;;
+  border-radius: 14px;
+ 
 }
 
 #projects {
   background-color: var(--primary-apple-blush);
-  color: white;
   display: flex;
+  color: white;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
-
 
 .card {
-flex-wrap: wrap;
-min-height: 200px;
-min-width: 200px;
-max-height: 300px;
-max-width: 300px;
-box-shadow: 0 0 5px rgb(73, 70, 70);
+min-height: 250px;
+width: 350px;
+color: var(--primary-apple-blush);
+box-shadow: 0 0 10px rgb(73, 70, 70),
+0 0 5px black;
 border-radius: 7px;
 background-color: #FFFFFF;
-padding: 2rem;
-margin: 2rem;
-}
-.card img, iframe{
-  max-height: 200px;
+padding: 1rem;
+margin: 1rem;
 }
 
-.info img{
+.card img{
   max-height: 200px;
-  max-width: auto;
-  margin: 1rem;
   border-radius:7px;
   box-shadow: 0 0 5px rgb(73, 70, 70);
 }
 
 #aboutMe {
-  background-color: var(--jade-green);
+  background-color: var(--highlight-jade-green);
 
 }
 
 #skills {
-  background-color: var(--jade-green);
+  background-color: var(--secondary-oak-brown);
+  border: 4px solid var(--highlight-jade-green);
 }
 
 #bch {
@@ -176,7 +177,7 @@ margin: 2rem;
 /* FOOTER  */
 
 footer {
-  background-color: var(--oak-brown);
+  background-color: var(--secondary-oak-brown);
   min-height: 200px;
   padding: 1rem;
 }
