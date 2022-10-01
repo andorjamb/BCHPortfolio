@@ -19,19 +19,12 @@
       background-size: cover;
     height: 100vh;}
 
-    .box{
-      border-radius: 7px;
-     
-    }
 
-    .box > img {
-      height: 100%;
-      width: auto;
-      border-radius: 7px;
-
-    }
+ 
     .main-grid {
       display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(6, 1fr);;
       grid-template-areas:
         'area1 area1 area2 area2 area3'
         'area1 area1 area2 area2 area3'
@@ -39,51 +32,65 @@
         'area8 area5 area6 area7 area7'
         'area8 area9 area9 area7 area7'
         'area8 area9 area9 area10 area11';
-
-
+        grid-gap: 2rem;
       }
+
+
+    .box {
+      border-radius: 7px; 
+      min-height: 50px;
+      min-width: 50px;
+      background-color: blue;
+    
+    }
+
+  
      #area1{
-      grid-area: 'area1';
+      grid-area: area1;
+      
 
      } 
      #area2{
-      grid-area: 'area2';
+      grid-area: area2;
+     
 
      } 
      #area3{
-      grid-area: 'area3';
+      grid-area: area3;
+  
 
      } 
      #area4{
-      grid-area: 'area4';
+      grid-area: area4;
+
 
      } 
      #area5{
-      grid-area: 'area5';
+      grid-area: area5;
 
      } 
      #area6{
-      grid-area: 'area6';
+      grid-area: area6;
 
      } 
      #area7{
-      grid-area: 'area7';
+      grid-area: area7;
 
      } 
      #area8{
-      grid-area: 'area8';
+      grid-area: area8;
 
      } 
      #area9{
-      grid-area: 'area9';
+      grid-area: area9;
 
      } 
      #area10{
-      grid-area: 'area10';
+      grid-area: area10;
 
      } 
      #area11{
-      grid-area: 'area11';
+      grid-area: area11;
 
      } 
 
@@ -92,18 +99,19 @@
 
 <body>
 
-  <div class="main-grid"></div>
-  <div class="box" id="area1"><img src="./assets/images/jade_lion.jpg"></div>
-  <div class="box" id="area2"><img src="./assets/images/pottery.jpg"></div>
-  <div class="box" id="area3"><img src="./assets/images/desert.jpg"></div>
-  <div class="box" id="area4"><img src="./assets/images/appleBowl.jpg"></div>
+  <div class="main-grid">  
+  <div class="box" id="area1"></div>
+  <div class="box" id="area2"></div>
+  <div class="box" id="area3"></div>
+  <div class="box" id="area4"></div>
   <div class="box" id="area5"><img src=""></div>
   <div class="box" id="area6"><img src=""></div>
   <div class="box" id="area7"><img src=""></div>
   <div class="box" id="area8"><img src=""></div>
   <div class="box" id="area9"><img src=""></div>
   <div class="box" id="area10"><img src=""></div>
-  <div class="box" id="area11"><img src=""></div>
+  <div class="box" id="area11"><img src=""></div></div>
+
   
 </body>
 </html>
