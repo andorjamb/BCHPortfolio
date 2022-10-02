@@ -31,6 +31,7 @@ html {
 
 body {
   font-family: "Inria sans";
+  background-color: #521d18;
 }
 
 h1 {
@@ -160,7 +161,7 @@ margin: 1rem;
   box-shadow: 0 0 5px rgb(73, 70, 70);
 }
 
-#aboutMe {
+#about {
   background-color: var(--highlight-jade-green);
 
 }
@@ -174,6 +175,8 @@ margin: 1rem;
   background-color: var(--jade-green);
 }
 
+
+
 /* FOOTER  */
 
 footer {
@@ -181,11 +184,11 @@ footer {
   min-height: 200px;
   padding: 1rem;
 }
+#contact-form {
 
-.contact-form input {
-  border-radius: 7px;
   padding: 0.5rem 1rem;
 }
+
 #logo4 {
   height: 75px;
   width: auto;
@@ -208,12 +211,8 @@ footer {
 
 }
 
-#messageButton {
+#submitBtn{
   border-radius: 7px;
-}
-
-.slidingMenu {
-  background-color: var(--highlight-apple-green);
 }
 
 

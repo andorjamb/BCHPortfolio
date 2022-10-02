@@ -19,7 +19,7 @@
   <header>
     <div class="title-banner">
       <div class="logo">
-        <img class="logo" src="./assets/images/logoInverseCopy.png" alt="logo" />
+        <a href="./index.html"><img class="logo" src="./assets/images/logoInverseCopy.png" alt="logo" /></a>
       </div>
       <div class="title">
         <h1>Anna Petelin</h1>
@@ -31,13 +31,16 @@
         <a href="#projects">
           <li>Projects</li>
         </a>
-        <a href="#aboutMe">
+        <a href="#about">
           <li>About Me</li>
         </a>
         <a href="#skills">
           <li>Skills</li>
         </a>
         <a href="#bch">
+          <li>BCH</li>
+        </a>
+        <a href="#contact">
           <li>BCH</li>
         </a>
         <a href="./gallery.html">
@@ -94,7 +97,7 @@
 
     <p id="copyright">Copyright &copy Anna Petelin 2022</p>
     <h3>Contact me:</h3>
-    <form class="contact-form">
+    <form id="contact-form">
       <tr>
         <td>
           <label for="name"><input type="text" id="name" placeholder="Your name" /></label>
@@ -102,10 +105,15 @@
       </tr>
       <tr>
         <td>
+          <label for="email"><input type="email" id="email" placeholder="Your email" /></label>
+        </td>
+      </tr>
+      <tr>
+        <td>
           <label for="message"><input type=text maxlength=100 placeholder="Message" /></label>
         </td>
       </tr>
-      <input type="submit" id="submitMessage">
+      <input type="submit" id="submitBtn" value="Send">
     </form>
     <div><img id="logo4" src="./assets/images/4logo-removebg-preview.png"></div>
     <p id="back-to-top">Back to Top</p>
