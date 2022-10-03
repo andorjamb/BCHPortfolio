@@ -63,13 +63,13 @@ input, button {
 header {
   background: transparent;
   margin-top: 0;
+  position: fixed;
 }
 
 .title-banner {
   width: 100vw;
   background-color: var(--primary-apple-blush);
   margin-bottom: 0;
-  position: fixed;
   display: flex;
 }
 
@@ -85,19 +85,16 @@ header {
   flex: 3;
 }
 
-.menu-icon {
-  font-family: 'Material Symbols Outlined';
-  display: none;
-}
 
 
 nav {
   background-color: var(--primary-apple-red);
   font-size: 1.5em;
   margin-top: 0;
-  height: 80px;
-  line-height: 80px;
-  padding: 0 40px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+ 
 }
 
 nav-overlay {
@@ -110,6 +107,12 @@ nav-overlay {
 .default-nav {
   display: none;
 }
+
+.menu-icon {
+  font-family: 'Material Symbols Outlined';
+  display: none;
+}
+
 
 nav-circle-1 {
   border-radius: 50%;
@@ -191,7 +194,7 @@ nav a :hover {
   margin: 1rem;
   border-radius: 14px;
   background-color: var(--primary-apple-blush);
-  
+  color: #B6E9EF
  
 }
 
@@ -219,6 +222,19 @@ margin: 1rem;
   max-height: 200px;
   border-radius:7px;
   box-shadow: 0 0 5px rgb(73, 70, 70);
+}
+
+.main-flex-container a {
+  text-decoration: none;
+  color: var(--glass-blue);
+  font-weight:bolder;
+}
+
+progress {
+  height: 10px;
+  width: 200px;
+  border-radius: 7px; ;
+  display: block;
 }
 
 
