@@ -261,6 +261,14 @@ footer {
   bottom: 20px;
   right: 20px;
 }
+#skills>p {
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+#skills>p:nth-child(even) {
+  background-color: var(--secondary-oak-brown);
+}
 
 .rotate {
   animation: spin 1s 3;

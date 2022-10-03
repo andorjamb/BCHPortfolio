@@ -11,9 +11,9 @@ const logoOverlay = document.querySelector('.logoOverlay');
 
 
 function scrollDownEvents() {
-    backToTop.style.visibility = visible;
+    backToTop.style.display = 'block';
     navOverlay.style.classList.add();
-    logoOverlay.style.classList.remove()
+    logoOverlay.style.classList.remove();
 
 }
 
