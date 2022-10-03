@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Anna Petelin">
   <title>Anna's Portfolio</title>
   <link rel="stylesheet" href="/style.css" />
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon_io/apple-touch-icon.png">
@@ -41,7 +42,7 @@
           <li>BCH</li>
         </a>
         <a href="#contact">
-          <li>BCH</li>
+          <li>Contact</li>
         </a>
         <a href="./gallery.html">
           <li>Gallery</li>
@@ -54,34 +55,49 @@
   </header>
   <section class="hero">
     <div class="hero-banner">
-      <img class="hero-banner" src="./assets/images/hero.jpg" alt="Noosa_National_Park">
+      <img class="hero-banner" src="./assets/images/appleBowl.jpg" alt="apples-in-bowl">
     </div>
   </section>
   <main>
     <div class="main-flex-container">
       <section class="info" id="projects">
         <h2>Projects</h2>
-        <p></p>
+      
         <div class="card">
+          <h3>Linear-Background Generator</h3>
           <img src="./assets/images/linearBackground.png">
           <p>A simple interactive linear-gradient generator, built with JavaScript</p>
+
+        <img class="left-float" src="" alt="project_screen-shot"/><!-- project image here -->
           <p>Link to project: <a href="https://public.bc.fi/s2200743/background_gradient/">Linear-Gradient generator</a></p> 
         </div>
-        <div class="card"><img src="./assets/images/pizza.png">
-        <p>A pretend pizza-ordering interface</p></div>
+        <div class="card">
+          <h3>Pizza Site</h3><img src="./assets/images/pizza.png">
+        <p>A pretend pizza-ordering interface</p>
+        <a>Read more</a></div>
+        <div class="card">
+          <h3>Speed Game</h3><img src="./assets/images/pizza.png">
+        <p>A pretend pizza-ordering interface</p>      <a>Read more</a></div>
+  
        
       </section>
-      <section class="info" id="aboutMe">
-        <h2>About Me</h2>
+      <section class="info" id="about">
+        <h2>About</h2>
         I live in Helsinki and am studying fullstack web development. Before that I was learning Python and C languages 
         as a hobby for a few years. In life I get a lot of satisfaction out of imagining how things could be better, and having the skills and resources to make it happen...
         so some of my favourite activities are gardening, renovations, and programming! In programming I particularly like problem-solving 
         and using logic creatively. It is great when things work and also great when they don't, because then I have a job to do and something to learn. <img src="" >
-      <img src="" alt="site-in-progress"></section>
+     </section>
       <section class="info" id="skills">
         <h2>Skills</h2>
    My front-end skills include HTML5, CSS3, and JavaScript. 
-        <img class="left-float" src="" /><!-- project image here -->
+   <!-- add progress bar -->
+   <progress max=100 value=30></progress>
+   <progress max=100 value=50></progress>
+   <progress max=100 value=60></progress>
+   <progress max=100 value=0></progress>
+   <progress max=100 value=0></progress>
+   <progress max=100 value=0></progress>
       </section>
       <section class="info" id="bch">
         <h3>Business College Helsinki</h3>
@@ -95,9 +111,11 @@
 
   <footer>
 
-    <p id="copyright">Copyright &copy Anna Petelin 2022</p>
+
+    <div id="contact">
     <h3>Contact me:</h3>
     <form id="contact-form">
+      <table>
       <tr>
         <td>
           <label for="name"><input type="text" id="name" placeholder="Your name" /></label>
@@ -110,13 +128,13 @@
       </tr>
       <tr>
         <td>
-          <label for="message"><input type=text maxlength=100 placeholder="Message" /></label>
+          <label for="message"><input type="textarea" maxlength=100 placeholder="Message" /></label>
         </td>
-      </tr>
-      <input type="submit" id="submitBtn" value="Send">
-    </form>
-    <div><img id="logo4" src="./assets/images/4logo-removebg-preview.png"></div>
-    <p id="back-to-top">Back to Top</p>
+      </tr></table>
+      <button type="submit" class="submitBtn" id="sendBtn" value="Send">Send</button>
+    </form></div>
+    <button id="back-to-top">Back to top</button> 
+    <p id="copyright">Copyright &copy Anna Petelin 2022</p>
   </footer>
   <script src="./main.js"></script>
 </body>
