@@ -14,6 +14,7 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -62,75 +63,107 @@
     <div class="main-flex-container">
       <section class="info" id="projects">
         <h2>Projects</h2>
-      
+
         <div class="card">
           <h3>Linear-Background Generator</h3>
           <img src="./assets/images/linearBackground.png">
           <p>A simple interactive linear-gradient generator, built with JavaScript</p>
 
-        <img class="left-float" src="" alt="project_screen-shot"/><!-- project image here -->
-          <p>Link to project: <a href="https://public.bc.fi/s2200743/background_gradient/">Linear-Gradient generator</a></p> 
+          <img class="left-float" src="" alt="project_screen-shot" /><!-- project image here -->
+          <p>Link to project: <a href="https://public.bc.fi/s2200743/background_gradient/">Linear-Gradient generator</a>
+          </p>
         </div>
         <div class="card">
           <h3>Pizza Site</h3><img src="./assets/images/pizza.png">
-        <p>A pretend pizza-ordering interface</p>
-        <a>Read more</a></div>
+          <p>A pretend pizza-ordering interface</p>
+          <a>Read more</a>
+        </div>
         <div class="card">
           <h3>Speed Game</h3><img src="./assets/images/pizza.png">
-        <p>A pretend pizza-ordering interface</p>      <a>Read more</a></div>
-  
-       
+          <p>Built with JavaScript and CSS</p> <a>Read more</a>
+        </div>
+
       </section>
       <section class="info" id="about">
         <h2>About</h2>
-        I live in Helsinki and am studying fullstack web development. Before that I was learning Python and C languages 
-        as a hobby for a few years.  <img src="" >
-     </section>
+        I live in Helsinki and am studying fullstack web development. Before that I was learning Python and C languages
+        as a hobby for a few years.
+      </section>
       <section class="info" id="skills">
         <h2>Skills</h2>
-   My front-end skills include HTML5, CSS3, and JavaScript. 
-   <!-- add progress bar -->
-   <!-- add nth-child styling to skills  -->
-   <p>HTML <progress max=100 value=30></progress></p>
-   <p>CSS <progress max=100 value=30></progress></p>
-   <p>JavaScript <progress max=100 value=30></progress></p>
+        <table class="skills-table">
+          <tr>
+            <td> <img src="./assets/images/icons8-html-5.svg">
+
+            </td>
+            <td>HTML</td>
+            <td><progress max=100 value=70></progress></td>
+          </tr>
+          <tr>
+            <td> <img src="./assets/images/icons8-css3.svg"></td>
+            <td>CSS3</td>
+            <td><progress max=100 value=40></progress></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>JavaScript </td>
+            <td><progress max=100 value=30></progress></td>
+          </tr>
+          <tr>
+            <td><img src="./assets/images/icons8-typescript.svg"></td>
+            <td>TypeScript </td>
+            <td><progress max=100 value=0></progress></td>
+          </tr>
+          <tr>
+            <td><img src="./assets/images/icons8-node-js.svg">
+            </td>
+            <td>Node</td>
+            <td><progress max=100 value=5></progress></td>
+          </tr>
+          <tr>
+            <td><img src="./assets/images/icons8-react-native.svg"></td>
+            <td>React</td>
+            <td><progress max=100 value=5></progress></td>
+          </tr>
+        </table>
       </section>
       <section class="info" id="bch">
         <h3>Business College Helsinki</h3>
         I am studying the Fullstack with Node.js and React Program at
         <a href="https://en.bc.fi/">Business College Helsinki.</a>
       </section>
-
     </div>
   </main>
-
-
   <footer>
-
-
     <div id="contact">
-    <h3>Contact me:</h3>
-    <form id="contact-form">
-      <table>
-      <tr>
-        <td>
-          <label for="name"><input type="text" id="name" placeholder="Your name" /></label>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for="email"><input type="email" id="email" placeholder="Your email" /></label>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for="message"><input type="textarea" maxlength=100 placeholder="Message" /></label>
-        </td>
-      </tr></table>
-      <button type="submit" class="submitBtn" id="sendBtn" value="Send">Send</button>
-    </form></div>
-    <button id="back-to-top">Back to top</button> 
+      <h3>Contact me:</h3>
+      <form id="contact-form">
+        <table>
+          <tr>
+            <td>
+              <label for="name"><input type="text" id="name" placeholder="Your name" /></label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="email"><input type="email" id="email" placeholder="Your email" /></label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="message"><input type="textarea" maxlength=100 placeholder="Message" /></label>
+            </td>
+          </tr>
+        </table>
+        <button type="submit" class="submitBtn" id="sendBtn" value="Send">Send</button>
+      </form>
+    </div>
+    <button id="back-to-top">Back to top</button>
     <p id="copyright">Copyright &copy Anna Petelin 2022</p>
+    <a target="_blank" href="https://icons8.com/icon/20909/html-5">Html 5</a> and <a target="_blank"
+      href="https://icons8.com/icon/7gdY5qNXaKC0/css3">CSS3</a> icon by <a target="_blank"
+      href="https://icons8.com">Icons8</a>
+
   </footer>
   <script src="./main.js"></script>
 </body>
