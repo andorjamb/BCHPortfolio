@@ -9,13 +9,13 @@
   --secondary-apple-pink: #8F4051;
 
   --secondary-oak-brown: #85583C;
+  --seconday-pale-brown: #b29d8d;
 
   --highlight-apple-green: #eae8b2;
   --highlight-jade-blue: #8eb3cf;
   --highlight-jade-green: #8eb3cf;
-  --highlight-dun-brown: #cab6a2;
-
-  --glass-blue: #588AC4;
+ --hightlight-glass-blue: #588AC4;
+  /*--highlight-dun-brown: #cab6a2;*/
 
 }
 
@@ -38,18 +38,11 @@ body {
 h1 {
   font-family: "Meddon";
   font-size: 3rem;
-  text-shadow: 1px 1px white;
-  color: var(--primary-apple-red);
 }
 
-h2 {
+h2,h3 {
   font-family: "Walter Turncoat";
   font-size: 1.5rem;
-
-}
-
-h3 {
-  font-family: "Walter Turncoat";
 }
 
 input,
@@ -57,44 +50,45 @@ button {
   padding: 0.5rem;
   border-radius: 7px;
   margin-bottom: 1rem;
-
 }
 
 /*   HEADER   */
 
 header {
-  background: transparent;
   margin-top: 0;
   position: fixed;
 }
 
-.title-banner {
+.title-banner { /* contains the .logo and .title div classes as siblings */
   display: flex;
   width: 100vw;
+  height: 20vh;
   background: var(--primary-apple-blush);
-  height: 100px;
 }
 
-.logo,
-.logo img {
-  flex: 1;
-  height: auto;
-  width: auto;
-  margin: 0;
+.title-banner h1 {
+  color: var(--primary-apple-red);
+  text-shadow: 1px 1px white;
+text-align: center;
+line-height: 100%;
 }
 
-.title {
-  flex: 3;
+.logo {
+  display: inline-block;
+  height: 20vh; 
 }
 
-
+.title { /* div containing page title */
+border: solid 2px red;
+flex: 1;
+}
 
 nav {
   background-color: var(--primary-apple-blush);
   font-size: 1.5em;
   margin-top: 0;
-  height: 70px;
-  line-height: 70px;
+  height: 4rem;
+  line-height: 4rem;
   text-align: center;
 
 }
@@ -103,7 +97,7 @@ nav-overlay {
   display: none;
   background: transparent;
   position: fixed;
-  display: inline;
+  
 }
 
 .default-nav {
@@ -114,7 +108,10 @@ nav-overlay {
   font-family: 'Material Symbols Outlined';
   display: none;
 }
+.scrollDown { 
+  background-color: var(--primary-apple-red);
 
+}
 
 nav-circle-1 {
   border-radius: 50%;
@@ -174,10 +171,6 @@ nav a :hover {
   color: var(--secondary-oak-brown);
 }
 
-.hero {
-  background-image: linear-gradient(to right, #a88058, #cab6a2);
-}
-
 .hero-banner img {
   width: 100%;
   height: auto;
@@ -185,43 +178,47 @@ nav a :hover {
 
 /* MAIN CONTENT */
 
-.main-flex-container {
+main {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 100vw;
   background: var(--primary-apple-red);
   justify-content: center;
-  margin-top: 20px;
+  align-items: stretch;
 
 }
 
-.info {
+section {
   padding: 1rem;
   margin: 1rem;
-  border-radius: 14px;
+  border-radius: 1rem;
   background-color: var(--primary-apple-blush);
   color: white;
 
 }
 
-#projects {
 
+#projects {
   display: flex;
-  color: white;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 
+
 .card {
-  display: flex;
   min-height: 250px;
   width: 350px;
-  box-shadow: 0 0 10px rgb(73, 70, 70),
+  box-shadow: 10px 10px  rgb(73, 70, 70),
     0 0 5px black;
-  border-radius: 7px;
+  border-radius: 1rem;
   background-color: #FFFFFF;
   padding: 1rem;
   margin: 1rem;
+}
+
+.card::after {
+  display: table;
+  content: "";
+  clear: both;
 }
 
 .card img {
@@ -314,36 +311,27 @@ footer {
 }
 
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg)
-  }
-
-  100% {
-    transform: rotate(359deg);
-  }
-}
-
 @media screen and (max-width: 700px) {
 
   /*responsive navbar*/
 
-  .logo,
+ 
+  h1 {
+    font-size: 2rem;
+  }
+
   .logo img {
-    flex: 100%;
+    transform: scale(0.8);
   }
 
-  .title-banner {
-    flex: 100%;
-  }
-
+  
 
   progress {
     max-width: 200px;
   }
 
   .card {
-    flex: 100%;
+  
     background-color: var(--secondary-oak-brown);
     box-shadow: none;
   }
