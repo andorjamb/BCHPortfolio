@@ -89,6 +89,7 @@ nav {
   height: 4rem;
   line-height: 4rem;
   text-align: center;
+  z-index: 1;
 }
 
 .overlay {
@@ -140,11 +141,19 @@ nav a :hover {
   color: var(--secondary-oak-brown);
 }
 
-.hero-banner img {
-  width: 100%;
-  height: auto;
+.hero-banner {
+  width: 100vw;
+  min-height: 80vh;
   border: 3px solid red;
+  background-image: url("./assets/images/appleBowl.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top: 20vh;
+  z-index: 0;
 }
+
+
 
 /* MAIN CONTENT */
 
