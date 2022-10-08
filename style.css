@@ -71,7 +71,7 @@ header {
 .title-banner {
   display: flex;
   width: 100vw;
-  background: linear-gradient(45deg, var(--primary-apple-red), var(--primary-apple-blush));
+  background: var(--primary-apple-blush);
   height: 100px;
 }
 
@@ -90,7 +90,7 @@ header {
 
 
 nav {
-  background-color: var(--primary-apple-red);
+  background-color: var(--primary-apple-blush);
   font-size: 1.5em;
   margin-top: 0;
   height: 70px;
@@ -269,13 +269,14 @@ progress {
 /* FOOTER  */
 
 footer {
-  background: transparent;
+  background: var(--secondary-oak-brown);
   display: flex;
   min-height: 200px;
   padding: 1rem;
 }
 
 #contact-form {
+  flex: 1;
   padding: 0.5rem 1rem;
 }
 
@@ -308,6 +309,9 @@ footer {
   border-radius: 7px;
 }
 
+.acknowledgements {
+  flex: 1;
+}
 
 
 @keyframes spin {

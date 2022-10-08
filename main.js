@@ -14,6 +14,7 @@ function scrollDownEvents() {
     backToTop.style.display = 'block';
     navOverlay.style.classList.add();
     logoOverlay.style.classList.remove();
+    navbar.style.backgroundColor = "var(--primary-apple-red)";
 
 }
 
