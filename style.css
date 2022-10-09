@@ -35,7 +35,7 @@ body {
   margin-top: 0;
   font-family: "Inria sans";
   color: white;
-  bavkground-color: var(--primary-apple-blush);
+  background-color: var(--primary-apple-blush);
 }
 
 h1 {
@@ -112,7 +112,8 @@ nav {
 .menu-icon {
   /* only displays on smaller screens */
   font-family: 'Material Symbols Outlined';
-  display: none;
+
+  color: white;
 }
 
 .scrollDown {
@@ -320,6 +321,8 @@ progress {
 footer {
   background: var(--secondary-oak-brown);
   display: flex;
+  flex-direction: column;
+  align-items: center;
   min-height: 200px;
   padding: 1rem;
 }
@@ -327,6 +330,10 @@ footer {
 #contact-form {
   flex: 1;
   padding: 0.5rem 1rem;
+}
+
+#contact-form input {
+  width: 20vw;
 }
 
 #logo4 {
@@ -365,7 +372,9 @@ footer {
 @media screen and (max-width: 700px) {
 
   /*responsive navbar*/
-
+.menu-icon {
+  display: block;
+}
 
   h1 {
     font-size: 2rem;
@@ -375,7 +384,13 @@ footer {
     transform: scale(0.8);
   }
 
+.hero-overlay {
+  display: none;
+}
 
+nav ul {
+  display: none;
+}
 
   progress {
     max-width: 200px;
@@ -390,5 +405,9 @@ footer {
     max-width: 60vw;
     display: block;
     margin: auto;
+  }
+
+  #contact-form input {
+    width: 80vw;
   }
 }
