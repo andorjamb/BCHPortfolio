@@ -65,13 +65,14 @@ header {
 
 .fixed-header {
   position: fixed;
+  top: 0;
 }
 
 .title-banner {
   /* contains the .logo and .title div classes as siblings */
   display: flex;
   width: 100vw;
-  height: 25vh;
+  height: 20vh;
   background: var(--primary-apple-blush);
 }
 
@@ -83,7 +84,7 @@ header {
 }
 
 .logo {
-  height: 25vh;
+  height: 20vh;
   flex: 1;
 }
 
@@ -211,7 +212,6 @@ a.jump-up h2 {
   height: 80vh;
   position: relative;
   top: 35vh;
-  display: block;
   border: 3px solid red;
   background-image: url("./assets/images/appleBowl.jpg");
   background-repeat: no-repeat;
@@ -226,7 +226,7 @@ a.jump-up h2 {
   height: 100vh;
   position: fixed;
   display: block;
-  /* set to block on page load */
+  /* display set to block on page load */
   top: 0;
   left: 0;
   background: transparent;
@@ -241,20 +241,20 @@ main {
 
 section {
   padding: 1rem;
-  margin: 1rem;
+  width: 85vw;
+  margin: 2rem auto;
   border-radius: 1rem;
-  width: 80vw;
   background-color: var(--secondary-oak-brown);
 }
 
 #projects {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .card {
-  min-height: 22rem;
-  min-width: 32rem;
+  min-height: 18rem;
+  min-width: 18rem;
   padding: 1rem;
   margin: 1rem;
   border-radius: 1rem;
@@ -272,11 +272,10 @@ section {
 .card img {
   max-height: 12rem;
   border-radius: 1rem;
-  box-shadow: 0 0 5px rgb(73, 70, 70);
 }
 
 .main a {
-  color: var(--glass-blue);
+  color: var(--highlight-glass-blue);
   font-weight: bolder;
 }
 
