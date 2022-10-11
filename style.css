@@ -6,15 +6,15 @@
 :root {
   --primary-apple-red: #521d18;
   --primary-apple-blush: #79413c;
-  --secondary-apple-pink: #8F4051;
+  --secondary-apple-pink: #8f4051;
 
-  --secondary-oak-brown: #85583C;
+  --secondary-oak-brown: #85583c;
   --secondary-pale-brown: #b29d8d;
 
   --highlight-apple-green: #eae8b2;
   --highlight-jade-blue: #8eb3cf;
   --highlight-jade-green: #8eb3cf;
-  --hightlight-glass-blue: #588AC4;
+  --highlight-glass-blue: #588ac4;
   /*--highlight-dun-brown: #cab6a2;*/
 
   --circle-div-height: 7rem;
@@ -25,7 +25,6 @@ html {
 }
 
 * {
-
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
@@ -43,24 +42,25 @@ h1 {
   font-size: 3rem;
 }
 
-h2,
-h3 {
+h2 {
   font-family: "Walter Turncoat";
   font-size: 1.5rem;
 }
 
-input,
-button {
+input {
   padding: 0.5rem;
   border-radius: 7px;
   margin-bottom: 1rem;
+}
+
+button {
+  border: none;
 }
 
 /*   HEADER   */
 
 header {
   margin-top: 0;
-
 }
 
 .fixed-header {
@@ -71,25 +71,25 @@ header {
   /* contains the .logo and .title div classes as siblings */
   display: flex;
   width: 100vw;
-  height: 20vh;
+  height: 25vh;
   background: var(--primary-apple-blush);
 }
 
 .title-banner h1 {
   color: var(--primary-apple-red);
   text-shadow: 0 1px white;
-  text-align: center;
+  text-align: left;
   line-height: 100%;
 }
 
 .logo {
-  display: inline-block;
-  height: 20vh;
+  height: 25vh;
+  flex: 1;
 }
 
 .title {
   /* div containing page title */
-  flex: 1;
+  flex: 3;
 }
 
 nav {
@@ -101,90 +101,11 @@ nav {
   text-align: center;
   z-index: 1;
 }
-
-.overlay {
-  display: none;
-  background: transparent;
-  position: fixed;
-}
-
-
-.menu-icon {
-  /* only displays on smaller screens */
-  font-family: 'Material Symbols Outlined';
-
-  color: white;
-}
-
-.scrollDown {
-  /* activated on scrollTop > 100  */
-  background-color: var(--primary-apple-red);
-}
-
-.circle {
-  line-height: calc(var(--circle-div-height));
-  border-radius: 50%;
-  height: var(--circle-div-height);
-  width: var(--circle-div-height);
-  text-align: center;
-  position: -webkit-sticky;
-  position: sticky;
-}
-
-.circle a:hover {
-  color: var(--secondary-oak-brown);
-}
-
-a.jump-up h2{
-  color: white;
-}
-
-#circle-1 {
-  /* About */
-  background-color: #EAE8B2;
-  top: 11.5rem;
-  left: 44rem;
-}
-
-#circle-2 {
-  /*Contact */
-
-  background-color: #82ABB4;
-  top: 32rem;
-  left: 50rem;
-
-}
-
-#circle-3 {
-  /* Skills */
-  background-color: #8F4051;
-  top: 22rem;
-  left: 60rem;
-}
-
-#circle-4 {
-  /* Projects */
-  background-color: #853C70;
-  left: 80rem;
-  top: 15rem;
-
-}
-
-#circle-5 {
-  /* Gallery */
-  background-color: #919121;
-  top: 35rem;
-  left: 100rem;
-}
-
-#circle-6 {
-  background-color: var (--glass-blue);
-}
-
 nav ul {
-  max-height: 80px;
+  max-height: 10vh;
   margin: 0 0;
-  display: flex;
+  /*display: flex;*/
+  display: none;
   flex-direction: row;
   flex-wrap: nowrap;
   list-style-type: none;
@@ -203,17 +124,99 @@ nav a :hover {
   color: var(--secondary-oak-brown);
 }
 
+.overlay {
+  display: none;
+  background: transparent;
+  position: fixed;
+}
+
+.menu-icon {
+  /* only displays on smaller screens */
+  font-family: "Material Symbols Outlined";
+  color: white;
+  font-size: 2rem;
+  display: none;
+  background: transparent;
+}
+
+.scrollDown {
+  /* activated on scrollTop > 100  */
+  background-color: var(--primary-apple-red);
+}
+
+.circle.scrolldown {
+  z-index: 0;
+}
+
+.circle {
+  line-height: calc(var(--circle-div-height));
+  border-radius: 50%;
+  height: var(--circle-div-height);
+  width: var(--circle-div-height);
+  text-align: center;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 2; /* start index */
+}
+
+.circle a:hover {
+  color: var(--secondary-oak-brown);
+}
+
+a.jump-up h2 {
+  color: white;
+}
+
+#circle-1 {
+  /* About */
+  background-color: #eae8b2;
+  top: 11.5rem;
+  left: 44rem;
+}
+
+#circle-2 {
+  /*Contact */
+  background-color: #82abb4;
+  top: 32rem;
+  left: 50rem;
+}
+
+#circle-3 {
+  /* Skills */
+  background-color: #8f4051;
+  top: 22rem;
+  left: 60rem;
+}
+
+#circle-4 {
+  /* Projects */
+  background-color: #853c70;
+  left: 80rem;
+  top: 15rem;
+}
+
+#circle-5 {
+  /* Gallery */
+  background-color: #919121;
+  top: 35rem;
+  left: 100rem;
+}
+
+#circle-6 {
+  background-color: var (--highlight-glass-blue);
+}
+
 .hero-banner {
   width: 100vw;
   height: 80vh;
   position: relative;
-  top: 28vh;
+  top: 35vh;
+  display: block;
   border: 3px solid red;
   background-image: url("./assets/images/appleBowl.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
-
 }
 
 .hero-overlay {
@@ -229,17 +232,11 @@ nav a :hover {
   background: transparent;
 }
 
-
-
 /* MAIN CONTENT */
 
 main {
-  display: flex;
-  flex-direction: column;
   width: 100vw;
   background: var(--secondary-pale-brown);
-  align-items: center;
-
 }
 
 section {
@@ -247,7 +244,7 @@ section {
   margin: 1rem;
   border-radius: 1rem;
   width: 80vw;
-  background-color: var(--primary-apple-blush);
+  background-color: var(--secondary-oak-brown);
 }
 
 #projects {
@@ -262,12 +259,8 @@ section {
   margin: 1rem;
   border-radius: 1rem;
   background-color: var(--secondary-pale-brown);
-  box-shadow: 2px 2px 2px #301a18,
-    6px 6px 5px #613430,
-    7px 7px 8px #6d3b36,
+  box-shadow: 2px 2px 2px #301a18, 6px 6px 5px #613430, 7px 7px 8px #6d3b36,
     9px 9px 10px #79413c;
-
-
 }
 
 .card ::after {
@@ -304,16 +297,13 @@ progress {
   text-align: center;
 }
 
-
 .skills-table tr:nth-child(even) {
   background-color: var(--secondary-oak-brown);
   border-radius: 4px;
-
 }
 
 .skills-table td:first-child() {
   text-align: left;
-
 }
 
 /* FOOTER  */
@@ -346,7 +336,6 @@ footer {
   right: 20px;
 }
 
-
 .rotate {
   animation: spin 1s 3;
 }
@@ -368,29 +357,29 @@ footer {
   flex: 1;
 }
 
-
 @media screen and (max-width: 700px) {
-
   /*responsive navbar*/
-.menu-icon {
-  display: block;
-}
+  .menu-icon {
+    display: block;
+  }
 
   h1 {
     font-size: 2rem;
+  }
+
+  .menu-icon {
+    display: block;
   }
 
   .logo img {
     transform: scale(0.8);
   }
 
-.hero-overlay {
-  display: none;
-}
-
-nav ul {
-  display: none;
-}
+  .hero-overlay,
+  .hero-banner,
+  nav ul {
+    display: none;
+  }
 
   progress {
     max-width: 200px;
