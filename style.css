@@ -9,7 +9,7 @@
   --secondary-apple-pink: #8f4051;
 
   --secondary-oak-brown: #85583c;
-  --secondary-pale-brown: #b29d8d;
+ /*  --secondary-pale-brown: #b29d8d; */
 
   --highlight-apple-green: #eae8b2;
   --highlight-jade-blue: #8eb3cf;
@@ -28,18 +28,22 @@ html {
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  list-style-type: none;
 }
 
 body {
   margin-top: 0;
   font-family: "Inria sans";
   color: white;
-  background-color: var(--primary-apple-blush);
+  background-color: rgb(27, 22, 34);
 }
 
 h1 {
   font-family: "Meddon";
-  font-size: 3rem;
+  font-size: 4rem;
+  color: white;
+  line-height: 100%;
+
 }
 
 h2 {
@@ -47,10 +51,27 @@ h2 {
   font-size: 1.5rem;
 }
 
+a:link {
+  color: var(--highlight-glass-blue);
+}
+
+a:visited{
+  color: var(--highlight-jade-green);
+
+}
+a:hover {
+  color: var(--highlight-apple-green);
+}
+
+a:active {
+  color: var(--secondary-apple-pink);
+}
+
 input {
   padding: 0.5rem;
   border-radius: 7px;
   margin-bottom: 1rem;
+  border: none;
 }
 
 button {
@@ -76,15 +97,8 @@ header {
   background: var(--primary-apple-blush);
 }
 
-.title-banner h1 {
-  color: var(--primary-apple-red);
-  text-shadow: 0 1px white;
-  text-align: left;
-  line-height: 100%;
-}
-
 .logo {
-  height: 20vh;
+  height: 15vh;
   flex: 1;
 }
 
@@ -209,13 +223,10 @@ a.jump-up h2 {
 
 .hero-banner {
   width: 100vw;
-  height: 80vh;
-  position: relative;
-  top: 35vh;
-  border: 3px solid red;
-  background-image: url("./assets/images/appleBowl.jpg");
+  background-image: url("./assets/images/linus-nylund-JP23z_-dA74-unsplash.png");
   background-repeat: no-repeat;
   background-size: cover;
+  position: absolute;
   z-index: 0;
 }
 
@@ -236,7 +247,7 @@ a.jump-up h2 {
 
 main {
   width: 100vw;
-  background: var(--secondary-pale-brown);
+ /* background: var(--secondary-pale-brown);*/
 }
 
 section {
@@ -259,7 +270,7 @@ section {
   margin: 1rem;
   border-radius: 1rem;
   background-color: var(--secondary-pale-brown);
-  box-shadow: 2px 2px 2px #301a18, 6px 6px 5px #613430, 7px 7px 8px #6d3b36,
+  box-shadow: 0 0 2px #301a18, 0 0 5px #613430, 0 0 8px #6d3b36,
     9px 9px 10px #79413c;
 }
 
@@ -308,7 +319,7 @@ progress {
 /* FOOTER  */
 
 footer {
-  background: var(--secondary-oak-brown);
+  background-image: linear-gradient(0deg, rgb(117, 51, 51), rgb(27, 22, 34));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -397,5 +408,6 @@ footer {
 
   #contact-form input {
     width: 80vw;
+    border: none;
   }
 }
