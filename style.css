@@ -43,7 +43,6 @@ h1 {
   font-size: 4rem;
   color: white;
   line-height: 100%;
-
 }
 
 h2 {
@@ -83,6 +82,7 @@ button {
 header {
   width: 100%;
   margin-top: 0;
+  z-index: 1;
 }
 
 .sticky-header {
@@ -111,6 +111,7 @@ header {
 
 nav {
   background-color: var(--primary-apple-blush);
+  width: 100vw;
   font-size: 1.5em;
   margin-top: 0;
   height: 4rem;
@@ -121,12 +122,21 @@ nav {
 
 nav ul {
   max-height: 10vh;
-  margin: 0 0;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  list-style-type: none;
   justify-content: space-around;
+}
+
+nav a {
+  color: white;
+  align-items: center;
+  justify-content: space-around;
+  flex: 1;
+}
+
+nav a :hover {
+  color: var(--secondary-oak-brown);
 }
 
 nav.home {
@@ -139,35 +149,53 @@ nav.animate {
   animation: jump-up 2s ease-in-out 1;
 }
 
-nav a {
-  text-decoration: none;
-  color: white;
-  align-items: center;
-  justify-content: space-around;
-  flex: 1;
+nav.responsive ul {
+  display: block;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50px;
 }
 
-nav a :hover {
-  color: var(--secondary-oak-brown);
+nav.responsive ul li a {
+  display: block;
+  width: 100%;
 }
+
+
+
 
 .menu-icon {
-  /* only displays on smaller screens */
+  /* button for hamburger menu icon, only displays on smaller screens */
   font-family: "Material Symbols Outlined";
+  height: 3rem;
   color: white;
-  font-size: 3rem;
   display: none;
-  background: transparent;
   border: none;
   z-index: 3;
+  background: transparent;
 }
 
-.scrollDown {
+.material-symbols-outlined {
+  /* span in menu  button */
+  font-size: 3rem;
+}
+
+.hero {
+  width: 100vw;
+  height: 60vh;
+  background-image: url("./assets/images/linus-nylund-JP23z_-dA74-unsplash.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+
+.scroll-down {
   /* activated on scrollTop > 100  */
   background-color: var(--primary-apple-red);
 }
 
-.circle.scrollDown {
+.circle.scroll-down {
   z-index: 0;
 }
 
@@ -188,7 +216,6 @@ nav a :hover {
 a.jump-up h2 {
   color: white;
 }
-
 
 
 #circle-1 {
@@ -235,36 +262,12 @@ nav.home #circle-1 {
   background-color: var (--highlight-glass-blue);
 }
 
-.hero {
-  width: 100vw;
-  height: 60vh;
-  background-image: url("./assets/images/linus-nylund-JP23z_-dA74-unsplash.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  top: 300px;
-  z-index: 1;
-}
 
-.hero-overlay {
-  /* div with nav circles */
-  z-index: 1;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  display: block;
-  /* display set to block on page load */
-  top: 0;
-  left: 0;
-  background: transparent;
-}
 
 /* MAIN CONTENT */
 
 main {
-  position: relative;
   width: 100vw;
-  border: 5px solid green;
   z-index: 0;
   /* background: var(--secondary-pale-brown);*/
 }
@@ -272,9 +275,8 @@ main {
 section {
   scroll-margin-top: 7rem;
   padding: 1rem;
-  opacity: 0.9;
+  margin: 1.5rem auto;
   width: 85vw;
-  margin: 2rem auto;
   border-radius: 1rem;
   background-color: var(--secondary-oak-brown);
 }
@@ -287,6 +289,7 @@ section {
 .card {
   min-height: 18rem;
   min-width: 18rem;
+  max-width: 20rem;
   padding: 1rem;
   margin: 1rem;
   border-radius: 1rem;
@@ -304,6 +307,7 @@ section {
 .card img {
   max-height: 12rem;
   border-radius: 1rem;
+  max-width: 100%;
 }
 
 .main a {
@@ -328,9 +332,8 @@ progress {
   text-align: center;
 }
 
-.skills-table tr:nth-child(even) {
+.skills-table :nth-child(even) {
   background-color: var(--secondary-oak-brown);
-  border-radius: 4px;
 }
 
 .skills-table td:first-child() {
@@ -348,27 +351,13 @@ footer {
   padding: 1rem;
 }
 
-#contact-form {
+form {
   flex: 1;
   padding: 0.5rem 1rem;
 }
 
-#contact-form input {
+form input {
   width: 20vw;
-}
-
-#logo4 {
-  height: 75px;
-  width: auto;
-  align-items: right;
-  border-radius: 20px;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-}
-
-.rotate {
-  animation: spin 1s 3;
 }
 
 #back-to-top {
@@ -405,11 +394,12 @@ footer {
 
 @keyframes jump-up {
   0% {
-    background-color: red;
+    position: relative;
+
   }
 
   100% {
-    background-color: green;
+    position: static;
   }
 
 }
@@ -421,32 +411,28 @@ footer {
     display: block;
   }
 
-  h1 {
-    font-size: 2rem;
+  nav ul li a {
+    display: none;
   }
 
-  .menu-icon {
-    display: block;
+  h1 {
+    font-size: 2rem;
   }
 
   .logo img {
     transform: scale(0.8);
   }
 
-  .hero-banner,
-  nav ul {
-    display: none;
-  }
-
-  /* note: pasted from week 4 task, needs to be adapted */
-  nav.responsive ul li a {
-    color: rgb(14, 14, 41);
-    display: block;
-    width: 100%;
-  }
-
   progress {
     max-width: 200px;
+  }
+
+  section {
+    max-width: 95vw;
+  }
+
+  #projects {
+    flex-direction: column;
   }
 
   .card {
@@ -461,7 +447,7 @@ footer {
     margin: auto;
   }
 
-  #contact-form input {
+  form input {
     width: 80vw;
     border: none;
   }
