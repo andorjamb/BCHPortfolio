@@ -9,7 +9,7 @@
   --secondary-apple-pink: #8f4051;
 
   --secondary-oak-brown: #85583c;
- /*  --secondary-pale-brown: #b29d8d; */
+  /*  --secondary-pale-brown: #b29d8d; */
 
   --highlight-apple-green: #eae8b2;
   --highlight-jade-blue: #8eb3cf;
@@ -55,10 +55,11 @@ a:link {
   color: var(--highlight-glass-blue);
 }
 
-a:visited{
+a:visited {
   color: var(--highlight-jade-green);
 
 }
+
 a:hover {
   color: var(--highlight-apple-green);
 }
@@ -82,11 +83,23 @@ button {
 
 header {
   margin-top: 0;
+  top: 0;
 }
 
 .fixed-header {
-  position: fixed;
+  position: sticky;
   top: 0;
+}
+
+header ::after {
+  width: 100vw;
+  background-image: url("./assets/images/linus-nylund-JP23z_-dA74-unsplash.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top: 300px;
+  z-index: 2;
+
 }
 
 .title-banner {
@@ -105,6 +118,8 @@ header {
 .title {
   /* div containing page title */
   flex: 3;
+  text-align: right;
+  padding-right: 3rem;
 }
 
 nav {
@@ -116,6 +131,7 @@ nav {
   text-align: center;
   z-index: 1;
 }
+
 nav ul {
   max-height: 10vh;
   margin: 0 0;
@@ -152,6 +168,7 @@ nav a :hover {
   font-size: 2rem;
   display: none;
   background: transparent;
+  border: none;
 }
 
 .scrollDown {
@@ -171,7 +188,8 @@ nav a :hover {
   text-align: center;
   position: -webkit-sticky;
   position: sticky;
-  z-index: 2; /* start index */
+  z-index: 2;
+  /* start index */
 }
 
 .circle a:hover {
@@ -226,8 +244,9 @@ a.jump-up h2 {
   background-image: url("./assets/images/linus-nylund-JP23z_-dA74-unsplash.png");
   background-repeat: no-repeat;
   background-size: cover;
-  position: absolute;
-  z-index: 0;
+  position: relative;
+  top: 300px;
+  z-index: 1;
 }
 
 .hero-overlay {
@@ -246,12 +265,17 @@ a.jump-up h2 {
 /* MAIN CONTENT */
 
 main {
+  position: relative;
   width: 100vw;
- /* background: var(--secondary-pale-brown);*/
+  border: 5px solid green;
+  z-index: 0;
+  /* background: var(--secondary-pale-brown);*/
 }
 
 section {
+  scroll-margin-top: 7rem;
   padding: 1rem;
+  opacity: 0.9;
   width: 85vw;
   margin: 2rem auto;
   border-radius: 1rem;
@@ -367,7 +391,13 @@ footer {
   flex: 1;
 }
 
+.acknowledgements p {
+  line-height: 1em;
+  margin: 0.2rem 0;
+}
+
 @media screen and (max-width: 700px) {
+
   /*responsive navbar*/
   .menu-icon {
     display: block;

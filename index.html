@@ -12,8 +12,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon_io_2/">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon_io_2/favicon-16x16.png">
   <!--  <link rel="manifest" href="/site.webmanifest"> -->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -30,32 +29,57 @@
       </div>
 
       <nav>
+        <!-- icon only visible in small screens  -->
+        <div><button class="menuIcon"><span class="material-symbols-outlined">
+              menu
+            </span></button></div>
         <ul>
-          
-            <li> <a href="#projects"> Projects   </a> </li>
-            <li>  <a href="#about">  About  </a>   </li>
-            <li> <a href="#skills">  Skills  </a>  </li>
-            <li> <a href="#contact">  Contact   </a> </li>
-            <li>   <a href="./gallery.html">Gallery  </a> </li>
-          
-         <!-- icon only visible in small screens  -->
-            <button><span class='menu-icon'>Menu</span></button>
-         
+
+          <li> <a href="#projects"> Projects </a> </li>
+          <li> <a href="#about"> About </a> </li>
+          <li> <a href="#skills"> Skills </a> </li>
+          <li> <a href="#contact"> Contact </a> </li>
+          <li> <a href="./gallery.html">Gallery </a> </li>
+
+
+
         </ul>
       </nav>
     </div>
     <div class="hero-banner">
     </div>
     <div class="hero-overlay">
-      <a class="jump-up" href="#about"><div class="circle" id="circle-1"><h2>About</h2></div></a>
-      <a class="jump-up" href="#contact"><div class="circle" id="circle-2"><h2>Contact</h2></div></a>
-      <a class="jump-up" href="#skills"><div class="circle" id="circle-3"><h2>Skills</h2></div></a>
-        <a class="jump-up" href="#projects"><div class="circle" id="circle-4"><h2>Projects</h2></div></a>
-          <a class="jump-up" href="./gallery.html"><div class="circle" id="circle-5"><h2>Gallery</h2></div></a>
-            <a class="jump-up" href="#"><div class="circle" id="circle-6"></div></a>
+      <a class="jump-up" href="#about">
+        <div class="circle" id="circle-1">
+          <h2>About</h2>
+        </div>
+      </a>
+      <a class="jump-up" href="#contact">
+        <div class="circle" id="circle-2">
+          <h2>Contact</h2>
+        </div>
+      </a>
+      <a class="jump-up" href="#skills">
+        <div class="circle" id="circle-3">
+          <h2>Skills</h2>
+        </div>
+      </a>
+      <a class="jump-up" href="#projects">
+        <div class="circle" id="circle-4">
+          <h2>Projects</h2>
+        </div>
+      </a>
+      <a class="jump-up" href="./gallery.html">
+        <div class="circle" id="circle-5">
+          <h2>Gallery</h2>
+        </div>
+      </a>
+      <a class="jump-up" href="#">
+        <div class="circle" id="circle-6"></div>
+      </a>
     </div>
   </header>
-<!--  ////////////////////  START OF MAIN CONTENT   ///////////////////////////////   -->
+  <!--  ////////////////////  START OF MAIN CONTENT   ///////////////////////////////   -->
 
   <main>
 
@@ -66,15 +90,13 @@
         <h3>Linear-Background Generator</h3>
         <img src="./assets/images/linearBackground.png">
         <p>A simple interactive linear-gradient generator, built with JavaScript</p>
-
-        <img class="left-float" src="" alt="project_screen-shot" /><!-- project image here -->
         <p>Link to project: <a href="https://public.bc.fi/s2200743/background_gradient/">Linear-Gradient generator</a>
         </p>
       </div>
       <div class="card">
-        <h3>Pokedex</h3><img src="">
+        <h3>Pokedex</h3><img src="./assets/images/pokedexScreenshot.png">
         <p>Built with CSS, JavaScript and the Pokemon API.</p>
-        <a>Read more</a>
+        <p> See the project <a href="https://public.bc.fi/s2200743/pokedex">here</a></p>
       </div>
       <div class="card">
         <h3>Speed Game</h3><img src="./assets/images/">
@@ -84,13 +106,13 @@
     </section>
     <section class="info" id="about">
       <h2>About</h2>
-      I live in Helsinki and am studying fullstack web development at Business College Helsinki. Before that I was learning Python and C languages
-      as a hobby for a few years.
-      <section class="info" id="bch">
-        <h3>Business College Helsinki</h3>
-        I am studying the Fullstack with Node.js and React Program at
-        <a href="https://en.bc.fi/">Business College Helsinki.</a>
-      </section>
+      I live in Helsinki and am studying fullstack web development at Business College Helsinki. Before that I was
+      learning Python and C languages as a hobby for a few years.
+
+      <h3>Business College Helsinki</h3>
+      I am studying the Fullstack with Node.js and React Program at
+      <a href="https://en.bc.fi/">Business College Helsinki.</a>
+
     </section>
     <section class="info" id="skills">
       <h2>Skills</h2>
@@ -137,9 +159,9 @@
   <!--  //////////////////////// FOOTER   //////////////////////////  -->
   <footer>
     <div id="contact">
-     
+
       <form id="contact-form">
-         <h3>Contact me:</h3>
+        <h3>Contact me:</h3>
         <table>
           <tr>
             <td>
@@ -161,11 +183,15 @@
 
         <button class="circle" id="back-to-top">Back to top</button>
         <div class="acknowledgements">
-         <p>Html 5 and CSS3 icon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
-         <p>Javascript logo from <a href="https://www.freepnglogos.com">Jfreepnglogos.com</a></p>
-  <p>Photo by <a href="https://unsplash.com/@dreamsoftheoceans?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Linus Nylund</a> 
-    on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>        
-  
+          <p>Html 5 and CSS3 icon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
+          <p>Javascript logo from <a href="https://www.freepnglogos.com">Jfreepnglogos.com</a></p>
+          <p>Photo by <a
+              href="https://unsplash.com/@dreamsoftheoceans?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Linus
+              Nylund</a>
+            on <a
+              href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+          </p>
+
           <p id="copyright">Site copyright &copy Anna Petelin 2022</p>
 
         </div>
