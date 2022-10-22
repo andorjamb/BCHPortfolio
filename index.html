@@ -18,8 +18,8 @@
 
 <body>
   <header>
-    <div class="fixed-header">
-      <div class="title-banner">
+    <div class="sticky-header">
+      <div class="logo-banner">
         <div class="logo">
           <a href="./index.html"><img class="logo" src="./assets/images/logoInverseCopy.png" alt="logo" /></a>
         </div>
@@ -30,9 +30,9 @@
 
       <nav>
         <!-- icon only visible in small screens  -->
-        <div><button class="menuIcon"><span class="material-symbols-outlined">
-              menu
-            </span></button></div>
+        <button class="menu-icon"><span class="material-symbols-outlined">
+            menu
+          </span></button>
         <ul>
 
           <li> <a href="#projects"> Projects </a> </li>
@@ -41,43 +41,41 @@
           <li> <a href="#contact"> Contact </a> </li>
           <li> <a href="./gallery.html">Gallery </a> </li>
 
-
-
         </ul>
       </nav>
     </div>
-    <div class="hero-banner">
+    <div class="hero">
     </div>
-    <div class="hero-overlay">
-      <a class="jump-up" href="#about">
-        <div class="circle" id="circle-1">
-          <h2>About</h2>
-        </div>
-      </a>
-      <a class="jump-up" href="#contact">
-        <div class="circle" id="circle-2">
-          <h2>Contact</h2>
-        </div>
-      </a>
-      <a class="jump-up" href="#skills">
-        <div class="circle" id="circle-3">
-          <h2>Skills</h2>
-        </div>
-      </a>
-      <a class="jump-up" href="#projects">
-        <div class="circle" id="circle-4">
-          <h2>Projects</h2>
-        </div>
-      </a>
-      <a class="jump-up" href="./gallery.html">
-        <div class="circle" id="circle-5">
-          <h2>Gallery</h2>
-        </div>
-      </a>
-      <a class="jump-up" href="#">
-        <div class="circle" id="circle-6"></div>
-      </a>
-    </div>
+
+    <a class="jump-up" href="#about">
+      <div class="circle" id="circle-1">
+        <h2>About</h2>
+      </div>
+    </a>
+    <a class="jump-up" href="#contact">
+      <div class="circle" id="circle-2">
+        <h2>Contact</h2>
+      </div>
+    </a>
+    <a class="jump-up" href="#skills">
+      <div class="circle" id="circle-3">
+        <h2>Skills</h2>
+      </div>
+    </a>
+    <a class="jump-up" href="#projects">
+      <div class="circle" id="circle-4">
+        <h2>Projects</h2>
+      </div>
+    </a>
+    <a class="jump-up" href="./gallery.html">
+      <div class="circle" id="circle-5">
+        <h2>Gallery</h2>
+      </div>
+    </a>
+    <a class="jump-up" href="#">
+      <div class="circle" id="circle-6"></div>
+    </a>
+
   </header>
   <!--  ////////////////////  START OF MAIN CONTENT   ///////////////////////////////   -->
 
@@ -179,22 +177,25 @@
             </td>
           </tr>
         </table>
+        <button type="submit" id="submit">Send</button>
+      </form>
 
+      <button class="circle" id="back-to-top">
+        <h2>Back to top</h2>
+      </button>
+      <div class="acknowledgements">
+        <p>Html 5 and CSS3 icon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
+        <p>Javascript logo from <a href="https://www.freepnglogos.com">Jfreepnglogos.com</a></p>
+        <p>Hero image by <a
+            href="https://unsplash.com/@dreamsoftheoceans?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Linus
+            Nylund</a>
+          on <a
+            href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        </p>
 
-        <button class="circle" id="back-to-top">Back to top</button>
-        <div class="acknowledgements">
-          <p>Html 5 and CSS3 icon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
-          <p>Javascript logo from <a href="https://www.freepnglogos.com">Jfreepnglogos.com</a></p>
-          <p>Photo by <a
-              href="https://unsplash.com/@dreamsoftheoceans?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Linus
-              Nylund</a>
-            on <a
-              href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-          </p>
+        <p id="copyright">Site copyright &copy Anna Petelin 2022</p>
 
-          <p id="copyright">Site copyright &copy Anna Petelin 2022</p>
-
-        </div>
+      </div>
 
 
 

@@ -57,7 +57,6 @@ a:link {
 
 a:visited {
   color: var(--highlight-jade-green);
-
 }
 
 a:hover {
@@ -82,27 +81,16 @@ button {
 /*   HEADER   */
 
 header {
+  width: 100%;
   margin-top: 0;
-  top: 0;
 }
 
-.fixed-header {
+.sticky-header {
   position: sticky;
   top: 0;
 }
 
-header ::after {
-  width: 100vw;
-  background-image: url("./assets/images/linus-nylund-JP23z_-dA74-unsplash.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  top: 300px;
-  z-index: 2;
-
-}
-
-.title-banner {
+.logo-banner {
   /* contains the .logo and .title div classes as siblings */
   display: flex;
   width: 100vw;
@@ -116,7 +104,6 @@ header ::after {
 }
 
 .title {
-  /* div containing page title */
   flex: 3;
   text-align: right;
   padding-right: 3rem;
@@ -135,12 +122,21 @@ nav {
 nav ul {
   max-height: 10vh;
   margin: 0 0;
-  /*display: flex;*/
-  display: none;
+  display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   list-style-type: none;
   justify-content: space-around;
+}
+
+nav.home {
+  /* default display for nav circles  when page loads */
+  position: relative;
+}
+
+nav.animate {
+  /*activate with scrollDown function in js*/
+  animation: jump-up 2s ease-in-out 1;
 }
 
 nav a {
@@ -155,20 +151,15 @@ nav a :hover {
   color: var(--secondary-oak-brown);
 }
 
-.overlay {
-  display: none;
-  background: transparent;
-  position: fixed;
-}
-
 .menu-icon {
   /* only displays on smaller screens */
   font-family: "Material Symbols Outlined";
   color: white;
-  font-size: 2rem;
+  font-size: 3rem;
   display: none;
   background: transparent;
   border: none;
+  z-index: 3;
 }
 
 .scrollDown {
@@ -176,7 +167,7 @@ nav a :hover {
   background-color: var(--primary-apple-red);
 }
 
-.circle.scrolldown {
+.circle.scrollDown {
   z-index: 0;
 }
 
@@ -186,8 +177,6 @@ nav a :hover {
   height: var(--circle-div-height);
   width: var(--circle-div-height);
   text-align: center;
-  position: -webkit-sticky;
-  position: sticky;
   z-index: 2;
   /* start index */
 }
@@ -200,11 +189,18 @@ a.jump-up h2 {
   color: white;
 }
 
+
+
 #circle-1 {
   /* About */
   background-color: #eae8b2;
   top: 11.5rem;
   left: 44rem;
+}
+
+nav.home #circle-1 {
+  position: relative;
+
 }
 
 #circle-2 {
@@ -239,8 +235,9 @@ a.jump-up h2 {
   background-color: var (--highlight-glass-blue);
 }
 
-.hero-banner {
+.hero {
   width: 100vw;
+  height: 60vh;
   background-image: url("./assets/images/linus-nylund-JP23z_-dA74-unsplash.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -377,14 +374,24 @@ footer {
 #back-to-top {
   background-color: var(--highlight-jade-green);
   color: white;
+  word-wrap: break-word;
+  text-align: center;
+  line-height: calc(var(--circle-div-height));
   display: none;
   position: fixed;
   bottom: 1.5rem;
   right: 1rem;
 }
 
-#sendBtn {
-  border-radius: 7px;
+#submit {
+  border-radius: 50%;
+  position: relative;
+  left: 240px;
+  background-color: var(--highlight-glass-blue);
+  color: white;
+  font-weight: 900;
+  height: 3.5rem;
+  width: 3.5rem;
 }
 
 .acknowledgements {
@@ -394,6 +401,17 @@ footer {
 .acknowledgements p {
   line-height: 1em;
   margin: 0.2rem 0;
+}
+
+@keyframes jump-up {
+  0% {
+    background-color: red;
+  }
+
+  100% {
+    background-color: green;
+  }
+
 }
 
 @media screen and (max-width: 700px) {
@@ -415,10 +433,16 @@ footer {
     transform: scale(0.8);
   }
 
-  .hero-overlay,
   .hero-banner,
   nav ul {
     display: none;
+  }
+
+  /* note: pasted from week 4 task, needs to be adapted */
+  nav.responsive ul li a {
+    color: rgb(14, 14, 41);
+    display: block;
+    width: 100%;
   }
 
   progress {
@@ -428,10 +452,11 @@ footer {
   .card {
     background-color: var(--secondary-oak-brown);
     box-shadow: none;
+    flex: 100%;
   }
 
   .card img {
-    max-width: 60vw;
+    max-width: 80vw;
     display: block;
     margin: auto;
   }
