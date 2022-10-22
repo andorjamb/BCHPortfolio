@@ -29,6 +29,7 @@ html {
   box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
+  border: none;
 }
 
 body {
@@ -70,36 +71,24 @@ input {
   padding: 0.5rem;
   border-radius: 7px;
   margin-bottom: 1rem;
-  border: none;
 }
 
-button {
-  border: none;
-}
 
 /*   HEADER   */
 
 header {
   width: 100%;
-  margin-top: 0;
   z-index: 1;
+  background: var(--primary-apple-blush);
 }
 
 .sticky-header {
   position: sticky;
+  max-height: 16rem;
   top: 0;
 }
 
-.logo-banner {
-  /* contains the .logo and .title div classes as siblings */
-  display: flex;
-  width: 100vw;
-  height: 20vh;
-  background: var(--primary-apple-blush);
-}
-
 .logo {
-  height: 15vh;
   flex: 1;
 }
 
@@ -112,26 +101,26 @@ header {
 nav {
   background-color: var(--primary-apple-blush);
   width: 100vw;
-  font-size: 1.5em;
-  margin-top: 0;
-  height: 4rem;
-  line-height: 4rem;
-  text-align: center;
   z-index: 1;
 }
 
 nav ul {
-  max-height: 10vh;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-around;
 }
 
+nav li {
+  font-size: 1.5em;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+
+}
+
 nav a {
   color: white;
-  align-items: center;
-  justify-content: space-around;
   flex: 1;
 }
 
@@ -146,7 +135,7 @@ nav.home {
 
 nav.animate {
   /*activate with scrollDown function in js*/
-  animation: jump-up 2s ease-in-out 1;
+  animation: jump 2s ease-in-out 1;
 }
 
 nav.responsive ul {
@@ -154,31 +143,29 @@ nav.responsive ul {
   width: 100%;
   position: absolute;
   left: 0;
-  top: 50px;
+  top: 100px;
 }
 
 nav.responsive ul li a {
   display: block;
   width: 100%;
+  color: rgb(27, 22, 34);
 }
-
-
 
 
 .menu-icon {
   /* button for hamburger menu icon, only displays on smaller screens */
   font-family: "Material Symbols Outlined";
-  height: 3rem;
-  color: white;
+  height: auto;
   display: none;
-  border: none;
   z-index: 3;
   background: transparent;
+  margin-left: 2rem;
 }
 
-.material-symbols-outlined {
+span.material-symbols-outlined {
   /* span in menu  button */
-  font-size: 3rem;
+  font-size: 50px;
 }
 
 .hero {
@@ -392,7 +379,7 @@ form input {
   margin: 0.2rem 0;
 }
 
-@keyframes jump-up {
+@keyframes jump {
   0% {
     position: relative;
 
@@ -421,6 +408,10 @@ form input {
 
   .logo img {
     transform: scale(0.8);
+  }
+
+  main img {
+    max-width: 80vw;
   }
 
   progress {
