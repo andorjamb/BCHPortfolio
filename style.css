@@ -84,24 +84,35 @@ header {
 
 .sticky-header {
   position: sticky;
-  max-height: 16rem;
+  border: solid 7px red;
   top: 0;
+}
+
+.title-banner {
+  display: flex;
+  width: 100%;
+  background: var(--primary-apple-blush);
 }
 
 .logo {
   flex: 1;
+  border: solid 7px green;
 }
 
 .title {
   flex: 3;
   text-align: right;
   padding-right: 3rem;
+  border: 3px solid yellow;
 }
 
 nav {
   background-color: var(--primary-apple-blush);
   width: 100vw;
+  height: 4rem;
   z-index: 1;
+  border: 3px solid pink;
+  position: relative;
 }
 
 nav ul {
@@ -111,18 +122,10 @@ nav ul {
   justify-content: space-around;
 }
 
-nav li {
-  font-size: 1.5em;
-  height: 4rem;
-  line-height: 4rem;
-  text-align: center;
-
-}
-
-nav a {
+/* nav a {
   color: white;
   flex: 1;
-}
+} */
 
 nav a :hover {
   color: var(--secondary-oak-brown);
@@ -168,6 +171,17 @@ span.material-symbols-outlined {
   font-size: 50px;
 }
 
+.circle {
+  line-height: calc(var(--circle-div-height));
+  border-radius: 50%;
+  color: white;
+  height: var(--circle-div-height);
+  width: var(--circle-div-height);
+  text-align: center;
+  z-index: 2;
+  position: absolute;
+}
+
 .hero {
   width: 100vw;
   height: 60vh;
@@ -177,72 +191,59 @@ span.material-symbols-outlined {
   z-index: 0;
 }
 
+nav.scroll-down {
+  z-index: 0;
+}
+
+.circle.scroll-down {
+  z-index: 1;
+}
+
+.hero.scroll-down,
+.title-banner.scroll-down {
+  z-index: 2;
+}
+
 .scroll-down {
   /* activated on scrollTop > 100  */
   background-color: var(--primary-apple-red);
 }
 
-.circle.scroll-down {
-  z-index: 0;
-}
-
-.circle {
-  line-height: calc(var(--circle-div-height));
-  border-radius: 50%;
-  height: var(--circle-div-height);
-  width: var(--circle-div-height);
-  text-align: center;
-  z-index: 2;
-  /* start index */
-}
-
-.circle a:hover {
-  color: var(--secondary-oak-brown);
-}
-
-a.jump-up h2 {
-  color: white;
-}
 
 
 #circle-1 {
   /* About */
   background-color: #eae8b2;
   top: 11.5rem;
-  left: 44rem;
-}
-
-nav.home #circle-1 {
-  position: relative;
-
+  left: 6rem;
 }
 
 #circle-2 {
-  /*Contact */
+  /*Projects*/
   background-color: #82abb4;
-  top: 32rem;
-  left: 50rem;
+  top: 20rem;
+  left: 10rem;
 }
 
 #circle-3 {
   /* Skills */
   background-color: #8f4051;
-  top: 22rem;
-  left: 60rem;
+  top: 15rem;
+  left: 13rem;
 }
 
 #circle-4 {
-  /* Projects */
+  /* Contact */
   background-color: #853c70;
-  left: 80rem;
   top: 15rem;
+  left: 40rem;
 }
 
 #circle-5 {
   /* Gallery */
   background-color: #919121;
-  top: 35rem;
-  left: 100rem;
+  top: 10rem;
+  left: 50rem;
 }
 
 #circle-6 {
@@ -349,10 +350,12 @@ form input {
 
 #back-to-top {
   background-color: var(--highlight-jade-green);
-  color: white;
+  border-radius: 50%;
   word-wrap: break-word;
   text-align: center;
-  line-height: calc(var(--circle-div-height));
+  width: 7rem;
+  height: 7rem;
+  color: white;
   display: none;
   position: fixed;
   bottom: 1.5rem;
