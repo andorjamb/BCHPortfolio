@@ -11,14 +11,14 @@ const circles = document.querySelectorAll('.circle');
 
 
 function scrollDownEvents() {
-    if (document.documentElement.scrollTop > 100) {
+    if (document.documentElement.scrollTop > 150) {
         console.log("activating scrolldown");
         nav.classList.add("scroll-down");
         backToTop.style.display = 'block';
         circles.forEach((circle)=> {circle.classList.add('scroll-down')});
     }
     else {
-        nav.className = "";
+        nav.classList.remove("scroll-down");
         backToTop.style.display = 'none';
     }
     
