@@ -84,7 +84,6 @@ header {
 
 .sticky-header {
   position: sticky;
-  border: solid 7px red;
   top: 0;
 }
 
@@ -96,14 +95,14 @@ header {
 
 .logo {
   flex: 1;
-  border: solid 7px green;
+
 }
 
 .title {
   flex: 3;
   text-align: right;
   padding-right: 3rem;
-  border: 3px solid yellow;
+
 }
 
 nav {
@@ -111,7 +110,6 @@ nav {
   width: 100vw;
   height: 4rem;
   z-index: 1;
-  border: 3px solid pink;
   position: relative;
 }
 
@@ -121,11 +119,6 @@ nav ul {
   flex-wrap: nowrap;
   justify-content: space-around;
 }
-
-/* nav a {
-  color: white;
-  flex: 1;
-} */
 
 nav a :hover {
   color: var(--secondary-oak-brown);
@@ -141,35 +134,37 @@ nav.animate {
   animation: jump 2s ease-in-out 1;
 }
 
-nav.responsive ul {
-  display: block;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 100px;
-}
-
 nav.responsive ul li a {
   display: block;
   width: 100%;
-  color: rgb(27, 22, 34);
+  color: var(--primary-apple-red);
 }
 
+nav.responsive ul {
+  background-color: white;
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 85px;
+}
+
+
+.small-screen-hero {
+  display: none; 
+}
 
 .menu-icon {
   /* button for hamburger menu icon, only displays on smaller screens */
   font-family: "Material Symbols Outlined";
   height: auto;
   display: none;
+  color: white;
   z-index: 3;
   background: transparent;
-  margin-left: 2rem;
 }
 
-span.material-symbols-outlined {
-  /* span in menu  button */
-  font-size: 50px;
-}
+
 
 .circle {
   line-height: calc(var(--circle-div-height));
@@ -257,7 +252,6 @@ nav.scroll-down {
 main {
   width: 100vw;
   z-index: 0;
-  /* background: var(--secondary-pale-brown);*/
 }
 
 section {
@@ -271,7 +265,9 @@ section {
 
 #projects {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+  background-image: radial-gradient(ellipse at center, white 20%, var(--secondary-oak-brown));
 }
 
 .card {
@@ -281,12 +277,12 @@ section {
   padding: 1rem;
   margin: 1rem;
   border-radius: 1rem;
-  background-color: var(--secondary-pale-brown);
+  background-color: var(--secondary-oak-brown);
   box-shadow: 0 0 2px #301a18, 0 0 5px #613430, 0 0 8px #6d3b36,
     9px 9px 10px #79413c;
 }
 
-.card ::after {
+.section ::after {
   display: table;
   content: "";
   clear: both;
@@ -331,15 +327,14 @@ progress {
 /* FOOTER  */
 
 footer {
-  background-image: linear-gradient(0deg, rgb(117, 51, 51), rgb(27, 22, 34));
+  background-image: linear-gradient(0deg, var(--primary-apple-red), rgb(27, 22, 34));
+  /* rgb(117, 51, 51)  */
 display: flex;
 justify-content: center;
   min-height: 200px;
-  border: 3px solid orange;
 }
 
 #footer-container {
-  border: 3px solid blue;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -349,7 +344,6 @@ justify-content: center;
 }
 
 form {
-  border: 3px solid red;
   flex: 1;
 
 }
@@ -413,11 +407,65 @@ form input {
 @media screen and (max-width: 700px) {
 
   /*responsive navbar*/
-  .menu-icon {
-    display: block;
+.title-banner {
+  width: 100%;
+}
+
+.menu-icon {
+    display: inline-block;
+    width: 100%;
+   
+    
+  }
+  span.material-symbols-outlined {
+    /* span in menu  button */
+    font-size: 5rem;
+    width: 100%;
+  
+  }
+header {
+  width: 100%;
+  margin: 0;
+}
+  .small-screen-hero {
+    height: 100%;
+    width: 100vw;
+    flex: 2;
+    display: flex;
   }
 
+  .small-screen-hero img 
+
+{width: 100%;
+}
+  body, footer {
+    background-color: var(--secondary-oak-brown);
+    background-image: none;
+    width: 100vw;
+    padding-bottom: 4rem;
+  }
+
+  .hero {
+    flex: 2;
+  } 
+
+  section {
+    background: transparent;
+    display: block;
+  width: 95vw;
+  margin: auto;
+  } 
+
   nav ul li a {
+    display: none;
+  }
+
+  nav {
+    height: 120px;
+    display: flex;
+  }
+
+  .hero {
     display: none;
   }
 
@@ -437,18 +485,16 @@ form input {
     max-width: 200px;
   }
 
-  section {
-    max-width: 95vw;
-  }
-
   #projects {
     flex-direction: column;
+    background-image: none;
   }
 
   .card {
     background-color: var(--secondary-oak-brown);
     box-shadow: none;
     flex: 100%;
+    margin: 0;
   }
 
   .card img {
@@ -457,8 +503,18 @@ form input {
     margin: auto;
   }
 
+  .card a {
+    font-size: 1.1rem;
+    font-weight: 900;
+  }
+
   form input {
     width: 80vw;
     border: none;
+  }
+
+  #submit {
+    display: block;
+    position: static;
   }
 }
