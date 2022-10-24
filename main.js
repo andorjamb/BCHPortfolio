@@ -19,16 +19,12 @@ function scrollDownEvents() {
         nav.classList.add("scroll-down");
         backToTop.style.display = 'block';
         circles.forEach((circle) => { circle.classList.add('in-line') });
-        title.style.zIndex = "3 !important";
-        hero.style.zIndex = "3";
         ul.style.zIndex = "-1";
     }
     else {
         nav.classList.remove("scroll-down");
         backToTop.style.display = 'none';
         circles.forEach((circle) => { circle.classList.remove('in-line') });
-        title.style.zIndex = "auto";
-        hero.style.zIndex = "3";
     }
 
 }

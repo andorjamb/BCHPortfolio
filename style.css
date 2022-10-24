@@ -106,16 +106,18 @@ nav {
 }
 
 nav ul {
+  display: flex;
   position: relative;
   width: 75vw;
   margin-top: 0;
   padding-top: 0;
   flex: 4;
   z-index: 0;
+  /*    ?    */
 }
 
 nav ul li {
-  display: inline-block;
+  flex: 1;
 }
 
 
@@ -138,7 +140,7 @@ nav a :hover {
   display: inline-block;
   height: var(--circle-div-height) !important;
   width: var(--circle-div-height) !important;
-  transform: scale(1);
+  line-height: calc(var(--circle-div-height)) !important;
   transition: height 1s, width 1s;
   position: static;
 }
@@ -159,7 +161,7 @@ nav a :hover {
 }
 
 nav.scroll-down {
-  z-index: 0;
+  z-index: -2;
   top: -1.5rem;
   justify-content: space-between;
   align-items: center;
@@ -334,7 +336,7 @@ progress {
   text-align: center;
 }
 
-.skills-table :nth-child(even) {
+.skills-table tr :nth-child(even) {
   background-color: var(--secondary-oak-brown);
 }
 
@@ -345,7 +347,7 @@ progress {
 /* FOOTER  ****************************************************/
 
 footer {
-  background-image: linear-gradient(0deg, var(--primary-apple-red), rgb(27, 22, 34));
+  background-image: linear-gradient(0deg, var(--primary-apple-red), var(--secondary--eggplant-black));
   display: flex;
   justify-content: center;
   min-height: 200px;
@@ -418,7 +420,6 @@ form input {
 }
 
 #submit:focus {
-
   transform: scale(1.1);
 }
 
@@ -451,7 +452,7 @@ form input {
   .small-screen-hero {
     /* div */
     height: 100%;
-    width: 100vw;
+    width: 90vw;
     display: flex;
   }
 
@@ -471,6 +472,8 @@ form input {
 
   .small-screen-hero img {
     width: 100%;
+    border-radius: 14px;
+
   }
 
   body,
@@ -496,7 +499,6 @@ form input {
 
   section {
     display: block;
-
     width: 95vw;
     margin: auto;
   }
@@ -507,10 +509,6 @@ form input {
 
   .logo img {
     transform: scale(0.8);
-  }
-
-  main img {
-    max-width: 80vw;
   }
 
   td {
