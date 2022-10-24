@@ -28,30 +28,30 @@
     }
 
     nav {
-      
+
       justify-content: space-between;
       align-items: center;
       color: white;
     }
 
-    nav ul  {
+    nav ul {
       display: flex;
     }
 
     nav ul li {
-      display: inline-block; 
+      display: inline-block;
       color: white;
       flex: 1;
     }
 
-    nav ul li a{
+    nav ul li a {
       font-size: 1.5rem;
       flex: 1;
       color: white;
-     
+
     }
 
-    .main-grid {
+    .main-container {
       display: grid;
       max-height: 100vh;
       max-width: 60vw;
@@ -129,6 +129,14 @@
       grid-area: area9;
 
     }
+
+    @media screen and (max-width: 700px) {
+      .main-container {
+        display: grid;
+        width: 100%;
+
+      }
+    }
   </style>
 </head>
 <header>
@@ -142,19 +150,21 @@
   </div>
 
   <nav>
-    <ul><li>
-      <a href="./index.html">
-        About Me
-      </a></li>
+    <ul>
+      <li>
+        <a href="./index.html">
+          About Me
+        </a>
+      </li>
       <li><a href="./index.html">
-        Projects
-      </a></li>
-       <li><a href="./index.html">
-       Skills
-      </a></li>
+          Projects
+        </a></li>
       <li><a href="./index.html">
-        Contact
-      </a></li>
+          Skills
+        </a></li>
+      <li><a href="./index.html">
+          Contact
+        </a></li>
     </ul>
   </nav>
 </header>
@@ -162,7 +172,7 @@
 <body>
   <main>
 
-    <div class="main-grid">
+    <div class="main-container">
       <div class="box" id="area1"><img src="./assets/images/desert.jpg"></div>
       <div class="box" id="area2"><img src="assets/images/eric-terrade.webp"></div>
       <div class="box" id="area3"><img src="assets/images/arnhem_pony.webp"></div>

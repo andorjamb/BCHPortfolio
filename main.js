@@ -8,6 +8,9 @@ const navOverlay = document.querySelector('.nav-overlay');
 const logoOverlay = document.querySelector('.logoOverlay');
 const menuIcon = document.querySelector('.menu-icon');
 const circles = document.querySelectorAll('.circle');
+const title = document.querySelector('.title');
+const hero = document.querySelector('.hero');
+const ul = document.querySelector('ul');
 
 
 function scrollDownEvents() {
@@ -15,19 +18,25 @@ function scrollDownEvents() {
         console.log("activating scrolldown");
         nav.classList.add("scroll-down");
         backToTop.style.display = 'block';
-        circles.forEach((circle)=> {circle.classList.add('scroll-down')});
+        circles.forEach((circle) => { circle.classList.add('in-line') });
+        title.style.zIndex = "3 !important";
+        hero.style.zIndex = "3";
+        ul.style.zIndex = "-1";
     }
     else {
         nav.classList.remove("scroll-down");
         backToTop.style.display = 'none';
+        circles.forEach((circle) => { circle.classList.remove('in-line') });
+        title.style.zIndex = "auto";
+        hero.style.zIndex = "3";
     }
-    
+
 }
 
 function mobileMenu() {
     if (!nav.classList.contains('responsive')) {
         nav.classList.add('responsive');
-        circles.forEach((circle)=>  circle.classList.add('responsive'));
+        circles.forEach((circle) => circle.classList.add('responsive'));
         document.body.style.overflow = "hidden";
     } else {
         nav.classList.remove('responsive');
@@ -51,6 +60,8 @@ menuIcon.addEventListener('click', function () {
 });
 
 for (const link of navLinks) {
-    link.addEventListener('click', ()=> {mobileMenu();
-})
+    if (nav.classList.contains('responsive')) {
+        link.addEventListener('click', () => { mobileMenu(); })
+
+    }
 } 

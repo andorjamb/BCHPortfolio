@@ -88,7 +88,7 @@ header {
 }
 
 .title {
-  flex: 3;
+  flex: 4;
   text-align: right;
   padding-right: 3rem;
 
@@ -100,9 +100,24 @@ nav {
   height: 4rem;
   z-index: 1;
   position: relative;
-  top: -1.5rem;
+  /*   top: -1.5rem; */
+  display: flex;
 
 }
+
+nav ul {
+  position: relative;
+  width: 75vw;
+  margin-top: 0;
+  padding-top: 0;
+  flex: 4;
+  z-index: 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
 
 nav a :hover {
   transform: scale(1.1);
@@ -118,6 +133,16 @@ nav a :hover {
   position: absolute;
 }
 
+.circle.in-line {
+  z-index: 1;
+  display: inline-block;
+  height: var(--circle-div-height) !important;
+  width: var(--circle-div-height) !important;
+  transform: scale(1);
+  transition: height 1s, width 1s;
+  position: static;
+}
+
 .hero {
   width: 100vw;
   height: 60vh;
@@ -128,6 +153,11 @@ nav a :hover {
   z-index: 0;
 }
 
+.nav-spacer {
+  display: inline-block;
+  flex: 1;
+}
+
 nav.scroll-down {
   z-index: 0;
   top: -1.5rem;
@@ -135,39 +165,22 @@ nav.scroll-down {
   align-items: center;
 }
 
-
-nav.scrolldown ul {
-  display: flex;
-}
-
-nav.scrolldown ul li div.circle {
-  display: inline-block;
-  flex: 1;
-}
-
-.circle.scroll-down {
-  z-index: 1;
-  height: var(--circle-div-height);
-  width: var(--circle-div-height);
-  transition: height 1s, width 1s;
-  position: static;
-}
-
-.hero.scroll-down,
-.title-banner.scroll-down {
-  z-index: 2;
-}
-
 .scroll-down {
   /* activated on scrollTop > 100  */
   background-color: var(--primary-apple-red);
+
+}
+
+.circle h2 {
+  display: inline-block;
+
 }
 
 #circle-1 {
   /* About */
   background-color: #eae8b2;
-  top: 11.5rem;
-  left: 10rem;
+  top: 8rem;
+  left: 8rem;
   height: var(--circle-div-height);
   width: var(--circle-div-height);
 
@@ -177,7 +190,7 @@ nav.scrolldown ul li div.circle {
   /*Projects*/
   background-color: #82abb4;
   top: 20rem;
-  left: 10rem;
+  left: 16rem;
   height: var(--circle-div-height);
   width: var(--circle-div-height);
 }
@@ -185,8 +198,8 @@ nav.scrolldown ul li div.circle {
 #circle-3 {
   /* Skills */
   background-color: #8f4051;
-  top: 15rem;
-  left: 13rem;
+  top: 14rem;
+  left: 26rem;
   height: calc(var(--circle-div-height)*0.8);
   width: calc(var(--circle-div-height)*0.8);
   line-height: calc(var(--circle-div-height)*0.8);
@@ -195,8 +208,8 @@ nav.scrolldown ul li div.circle {
 #circle-4 {
   /* Contact */
   background-color: #853c70;
-  top: 15rem;
-  left: 40rem;
+  top: 17rem;
+  left: 35rem;
   height: calc(var(--circle-div-height)*1.2);
   width: calc(var(--circle-div-height)*1.2);
   line-height: calc(var(--circle-div-height)*1.2);
@@ -206,8 +219,8 @@ nav.scrolldown ul li div.circle {
 #circle-5 {
   /* Gallery */
   background-color: #919121;
-  top: 10rem;
-  left: 50rem;
+  top: 4rem;
+  left: 42rem;
   height: calc(var(--circle-div-height)*1.1);
   width: calc(var(--circle-div-height)*1.1);
 }
@@ -470,6 +483,10 @@ form input {
 
   .hero {
     flex: 2;
+  }
+
+  .nav-spacer {
+    display: none;
   }
 
   main {
