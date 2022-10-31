@@ -14,13 +14,16 @@ function scrollDownEvents() {
     if (document.documentElement.scrollTop > 150) {
         nav.classList.add("scroll-down");
         backToTop.style.display = 'block';
-        circles.forEach((circle) => { circle.classList.add('in-line') });
-        ul.style.zIndex = "-1";
+        if (!(ul.classList.contains('responsive'))) {
+            circles.forEach((circle) => { circle.classList.add('in-line') });
+            ul.style.zIndex = "-1";
+        }
     }
     else {
         nav.classList.remove("scroll-down");
         backToTop.style.display = 'none';
         circles.forEach((circle) => { circle.classList.remove('in-line') });
+
     }
 
 }
@@ -28,18 +31,12 @@ function scrollDownEvents() {
 function mobileMenu() {
     if (!(ul.classList.contains('responsive'))) {
         ul.classList.add('responsive');
-        navListItems.forEach((li) => li.classList.add('visible'));
         document.body.style.overflow = "hidden";
     } else {
         ul.classList.remove('responsive');
         document.body.style.overflow = "";
     }
 }
-
-for (const i of navListItems) {
-    console.log(i.classList);
-}
-
 
 form.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -56,6 +53,7 @@ menuIcon.addEventListener('click', function () {
 
 for (const link of navLinks) {
     if (ul.classList.contains('responsive')) {
+        console.log('triggering');
         link.addEventListener('click', () => { mobileMenu(); })
 
     }

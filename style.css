@@ -160,7 +160,6 @@ nav a :hover {
 
 nav.scroll-down {
   z-index: -2;
-  top: -1.5rem;
   justify-content: space-between;
   align-items: center;
 }
@@ -229,14 +228,15 @@ nav.scroll-down {
 /*  header classes for smaller screens only   ************************/
 
 ul.responsive {
-  width: 80vw;
+  width: 85vw;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(2, 1fr);
   height: 600px;
   background-color: var(--secondary-pale-brown);
-  opacity: 1;
-  position: absolute;
+  position: fixed;
+  top: 250px;
+  left: 0;
   z-index: 3;
   filter: opacity(95%);
   left: 1rem;
@@ -253,6 +253,7 @@ ul.responsive li a .circle {
 
 .small-screen-hero {
   display: none;
+
 }
 
 .menu-icon {
