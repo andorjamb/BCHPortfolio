@@ -239,7 +239,7 @@ ul.responsive {
   left: 0;
   z-index: 3;
   filter: opacity(95%);
-  left: 1rem;
+  padding-left: 1rem;
   border-radius: 14px;
 }
 

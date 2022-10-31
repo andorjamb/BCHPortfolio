@@ -52,9 +52,9 @@ menuIcon.addEventListener('click', function () {
 });
 
 for (const link of navLinks) {
-    if (ul.classList.contains('responsive')) {
-        console.log('triggering');
-        link.addEventListener('click', () => { mobileMenu(); })
-
-    }
-} 
+    link.addEventListener('click', () => {
+        if (ul.classList.contains('responsive')) {
+            ul.classList.remove('responsive')
+        }
+    })
+}
