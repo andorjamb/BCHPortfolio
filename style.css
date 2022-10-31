@@ -100,7 +100,6 @@ nav {
   height: 4rem;
   z-index: 1;
   position: relative;
-  /*   top: -1.5rem; */
   display: flex;
 
 }
@@ -113,7 +112,6 @@ nav ul {
   padding-top: 0;
   flex: 4;
   z-index: 0;
-  /*    ?    */
 }
 
 nav ul li {
@@ -174,7 +172,7 @@ nav.scroll-down {
 }
 
 .circle h2 {
-  display: inline-block;
+  display: block;
 
 }
 
@@ -230,22 +228,27 @@ nav.scroll-down {
 
 /*  header classes for smaller screens only   ************************/
 
-nav.responsive ul {
-  width: 90vw;
-  height: 80vh;
+ul.responsive {
+  width: 80vw;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  height: 600px;
   background-color: var(--secondary-pale-brown);
   opacity: 1;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
   position: absolute;
-  filter: opacity(90%);
+  z-index: 3;
+  filter: opacity(95%);
   left: 1rem;
   border-radius: 14px;
 }
 
-nav.responsive ul li a {
-  display: block;
+ul.responsive li a {
+  display: inline-block;
+}
 
+ul.responsive li a .circle {
+  position: static;
 }
 
 .small-screen-hero {
@@ -297,12 +300,6 @@ section {
   box-shadow: 0 0 2px #301a18, 0 0 5px #613430, 0 0 8px #6d3b36,
     9px 9px 10px #79413c;
 }
-
-/* .section ::after {
-  display: table;
-  content: "";
-  clear: both;
-} */
 
 .card img {
   border-radius: 1rem;
@@ -445,7 +442,7 @@ form input {
   }
 
   span.material-symbols-outlined {
-    /* span in menu  button */
+    /* span in menu button */
     font-size: 6.5rem;
   }
 
@@ -484,23 +481,20 @@ form input {
     padding-bottom: 4rem;
   }
 
-  .hero {
-    flex: 2;
-  }
-
   .nav-spacer {
     display: none;
   }
 
   main {
     display: block;
-    margin-top: 200px;
+    margin-top: 220px;
   }
 
   section {
     display: block;
     width: 95vw;
     margin: auto;
+    padding-left: 0;
   }
 
   h1 {

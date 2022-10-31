@@ -2,6 +2,7 @@
 const backToTop = document.getElementById('back-to-top');
 const form = document.querySelector('form');
 const nav = document.querySelector('nav');
+const navListItems = document.querySelectorAll('nav ul li');
 const navLinks = document.querySelectorAll('nav ul li a');
 const menuIcon = document.querySelector('.menu-icon');
 const circles = document.querySelectorAll('.circle');
@@ -25,16 +26,19 @@ function scrollDownEvents() {
 }
 
 function mobileMenu() {
-    if (!(nav.classList.contains('responsive'))) {
-        nav.classList.add('responsive');
-        circles.forEach((circle) => circle.classList.add('responsive'));
+    if (!(ul.classList.contains('responsive'))) {
+        ul.classList.add('responsive');
+        navListItems.forEach((li) => li.classList.add('visible'));
         document.body.style.overflow = "hidden";
     } else {
-        nav.classList.remove('responsive');
+        ul.classList.remove('responsive');
         document.body.style.overflow = "";
     }
 }
 
+for (const i of navListItems) {
+    console.log(i.classList);
+}
 
 
 form.addEventListener("submit", function (event) {
@@ -51,7 +55,7 @@ menuIcon.addEventListener('click', function () {
 });
 
 for (const link of navLinks) {
-    if (nav.classList.contains('responsive')) {
+    if (ul.classList.contains('responsive')) {
         link.addEventListener('click', () => { mobileMenu(); })
 
     }
