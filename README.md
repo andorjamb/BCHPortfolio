@@ -1,3 +1,7 @@
-# Portfolio task for HTML and CSS3 class
+# Basic Portfolio task
 
-currently hosted on Netlify: https://6357ba2cb2fdb84011a36e3b--magical-fudge-fe584c.netlify.app/  
+ A simple website built with vanilla JavaScript. Produced as part of coursework.
+
+
+
+currently hosted on Netlify: [Here] (https://6357ba2cb2fdb84011a36e3b--magical-fudge-fe584c.netlify.app/) 
